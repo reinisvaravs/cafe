@@ -16,6 +16,7 @@ header {
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: nowrap;
+    position: relative;
 }
 
 .logo-div {
@@ -80,5 +81,47 @@ header {
         font-size: 16px;
         border: none;
         cursor: pointer;
+    }
+}
+
+.M-screen {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .L-screen {
+        display: none;
+    }
+    .M-screen {
+        display: block;
+    }
+    .popup-menu {
+        position: fixed;
+        top: 25x;
+        right: 25px;
+        width: 4vw;
+        height: 4vw;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: transparent;
+        border: none;
+        z-index: 1;
+    }
+    .span-menu {
+        border-bottom: 1px solid white;
+        width: 100%;
+    }
+    .popup {
+        height: 100vh;
+        width: 50vw;
+        position: absolute;
+        top: 0;
+        right: -10px;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(3px);
+        transform: translateX(100%);
     }
 }

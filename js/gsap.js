@@ -26,3 +26,23 @@ curtainBtn.onclick = function() {
         boxShadow: "none"
     })
 }
+
+const menuBtn = document.getElementById("menuBtn")
+let isMenuOpen = false;
+
+menuBtn.onclick = function togglePopupMenu() {
+    if (isMenuOpen) {
+        gsap.to(".popup", {
+            x: "100%",
+            duration: 0.5,
+            ease: "power.out",
+        });
+    } else {
+        gsap.to(".popup", {
+            x: "0%",
+            duration: 0.5,
+            ease: "power.out",
+        });
+    }
+    isMenuOpen = !isMenuOpen;
+};

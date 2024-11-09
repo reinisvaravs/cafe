@@ -3,7 +3,7 @@ header {
     height: 90px;
     position: fixed;
     background-color: #131313;
-    z-index: 2;
+    z-index: 5;
 }
 
 .header-div {

@@ -1,5 +1,9 @@
 
 
+/* === HERO === */
+
+
+
 .bg {
     width: 100%;
     height: 117vh;
@@ -67,6 +71,10 @@
         }
     }
 }
+
+
+/* === INFO === */
+
 
 
 .info {
@@ -251,11 +259,6 @@
 }
 
 
-
-
-
-
-
 @media screen and (max-width: 1400px) {
     .address, .working-hours, .phone {
         h1 {
@@ -265,7 +268,94 @@
 }
 
 
+
+
+/* === ABOUT === */
+
 .about {
-    height: 200vh;
+    margin-top: 500px;
+    height: 120vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    h1 {
+        color: #b5986c;
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+    h2 {
+        color: #8e9399;
+        font-weight: 100;
+        margin: 10px 5%;
+        line-height: 40px;
+        max-width: 1300px;
+    }
+    .curtain-h2 {
+        color: #8e9399;
+        font-weight: 100;
+        text-align: center;
+        line-height: 40px;
+        max-width: 1300px;
+        margin-top: 70px;
+        display: none;
+        margin: 100px 10%;
+    }
+}
+
+.medium-line {
+    margin: 20px 0 30px 0;
+    width: 70px;
+    border-bottom: 2px solid #b5986c;
+}
+
+.about-img {
+    width: 90%;
+    max-width: 1300px;
+    height: 50vw;
+    max-height: 700px;
+    background: url(../assets/about.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+}
+
+
+
+
+/* === MENU === */
+
+
+#curtainBtn {
+    font-size: 25px;
+    letter-spacing: 1px;
+    background-color: transparent;
+    border: none;
+    color: rgba(181, 181, 181, 0.5);
+    text-decoration: underline;
+    margin-top: 30px;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu {
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    background-color: #131313;
+    transform: translateY(-710px);
+    box-shadow: 0 -30px 100px 60px #131313;
+    position: relative;
+    padding-top: 200px;
+}
+
+.new-header {
+    width: 100vw;
+    height: 120px;
+    background-color: #161c22;
 }

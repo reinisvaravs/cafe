@@ -370,6 +370,11 @@
 }
 
 
+.no-shadow::before {
+    box-shadow: none;
+}
+
+
 
 .new-header {
     width: 100%;

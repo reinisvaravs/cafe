@@ -21,10 +21,12 @@ curtainBtn.onclick = function() {
         duration: 1,
         ease: "power1.inOut",
     })
-    gsap.to(".menu", {
+    gsap.to(".section", {
         delay: 1,
-        boxShadow: "none"
-    })
+        onComplete: () => {
+            document.querySelector(".section").classList.add("no-shadow");
+        }
+    });
 }
 
 const menuBtn = document.getElementById("menuBtn")

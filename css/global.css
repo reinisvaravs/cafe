@@ -15,3 +15,7 @@ body {
 main, header, footer {
     width: calc(100vw - 15px);
 }
+
+:root {
+    --tan: #b5986c;
+}

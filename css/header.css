@@ -27,7 +27,7 @@ header {
 }
 
 .banner {
-    background-color: #b5986c;
+    background-color: var(--tan);
     width: 140px;
     height: 150px;
     position: relative;
@@ -76,7 +76,7 @@ header {
     button {
         width: 165px;
         height: 48px;
-        background-color: #b5986c;
+        background-color: var(--tan);
         color: white;
         font-size: 16px;
         border: none;

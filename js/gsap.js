@@ -11,7 +11,7 @@ curtainBtn.onclick = function() {
     document.querySelector("#curtainBtn").style.display = "none"
     document.querySelector(".curtain-h2").style.display = "block"
 
-    gsap.to(".menu", {
+    gsap.to(".curtain", {
         y: 0,
         duration: 1,
         ease: "power1.inOut",

@@ -277,7 +277,7 @@
 .about {
     margin-top: 600px;
     height: 120vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -302,7 +302,6 @@
         line-height: 40px;
         max-width: 1300px;
         margin-top: 70px;
-        display: none;
         margin: 100px 10%;
     }
 }
@@ -325,10 +324,14 @@
     margin-top: 50px;
 }
 
+.curtain {
+    width: 100%;
+    height: 100%;
+    transform: translateY(-730px);
+}
 
 
-
-/* === MENU === */
+/* === SECTION === */
 
 
 #curtainBtn {
@@ -345,18 +348,180 @@
     transform: translateX(-50%);
 }
 
-.menu {
+.section {
     z-index: 1;
-    height: 100vh;
-    width: 100vw;
+    height: 30vh;
+    width: 100%;
     background-color: #131313;
-    transform: translateY(-710px);
-    box-shadow: 0 -30px 100px 60px #131313;
     position: relative;
-    padding-top: 200px;
+    padding-top: 150px;
+    padding-bottom: 50px;
 }
 
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    box-shadow: 0 -30px 100px 60px #131313;
+    pointer-events: none;
+}
+
+
+
 .new-header {
-    width: 100vw;
-    height: 120px;
+    width: 100%;
+    height: 20vh;
+    background-color: #161c22;
+}
+
+
+
+/* === BANKETI === */
+
+
+
+.menu {
+    background-color: #f6ede0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    h1 {
+        color: var(--tan);
+        font-size: 50px;
+        margin-bottom: 20px;
+        margin-top: 100px;
+    }
+}
+
+.big-icon-div {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
+    border-radius: 200px;
+    background: linear-gradient(135deg, #342e25, #131313);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.big-icon {
+    width: 47%;
+    height: 47%;
+}
+
+
+.large-line {
+    margin: 20px 0 30px 0;
+    width: 100px;
+    border-bottom: 1px solid var(--tan);
+}
+
+.menu-buttons {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+    height: 100px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.uzkodas, .zupas, .pamatedieni, .saldie {
+    border: none;
+    color: var(--tan);
+    font-size: 22px;
+    padding-bottom: 20px;
+    width: 150px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.uzkodas {
+    color: #131313;
+    border-bottom: 1px solid #131313;
+    cursor: default;
+}
+
+.uzkodas-section, .zupas-section, .pamatedieni-section, .saldie-section {
+    width: 95%;
+    max-width: 1200px;
+    flex-direction: column;
+    position: relative;
+    display: none;
+    margin-bottom: 200px;
+}
+
+.uzkodas-section {
+    display: flex;
+}
+
+.menu-item {
+    width: 60%;
+    height: 100px;
+    position: relative;
+    border-bottom: 1px solid var(--tan);
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-apraksts {
+    width: 85%;
+
+    h1 {
+        font-size: 20px;
+        color: black;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        margin-top: 20px;
+    }
+    p {
+        font-size: 16px;
+    }
+    h2 {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        color: var(--tan);
+    }
+}
+
+.menu-cena {
+    width: 15%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.uzkodas-img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35%;
+    height: 70%;
+    border-radius: 100px 0 0;
+    background: url(../assets/image4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.drinks {
+    position: relative;
 }

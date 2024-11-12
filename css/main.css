@@ -231,16 +231,15 @@
 }
 
 
-.hours:nth-child(5), .hours:nth-child(8){
+.hours:nth-child(5), .hours:nth-child(8), .hours:nth-child(11){
     color: white;
     font-size: 24px;
     margin-top: 5px;
 }
 
-.hours:nth-child(4), .hours:nth-child(7) {
+.hours:nth-child(4), .hours:nth-child(7), .hours:nth-child(10) {
     color: rgba(181, 181, 181, 0.5);
     font-size: 20px;
-    margin-top: 10px;
 }
 
 .phone p {
@@ -431,7 +430,7 @@
     border-bottom: 1px solid var(--tan);
 }
 
-.menu-buttons {
+.menu-buttons-div {
     width: 90%;
     margin: auto;
     max-width: 1200px;
@@ -444,7 +443,7 @@
     justify-content: space-evenly;
 }
 
-.uzkodas, .zupas, .pamatedieni, .saldie {
+.menu_button {
     border: none;
     color: var(--tan);
     font-size: 22px;
@@ -454,28 +453,24 @@
     cursor: pointer;
 }
 
-.uzkodas {
+.active-menu-btn {
     color: #131313;
     border-bottom: 1px solid #131313;
     cursor: default;
 }
 
-.uzkodas-section, .zupas-section, .pamatedieni-section, .saldie-section {
+.menu-page, .galas-page {
     width: 95%;
     max-width: 1200px;
+    min-height: 500px;
     flex-direction: column;
     position: relative;
     display: none;
     margin-bottom: 200px;
 }
 
-.uzkodas-section {
-    display: flex;
-}
-
 .menu-item {
     width: 60%;
-    height: 100px;
     position: relative;
     border-bottom: 1px solid var(--tan);
     display: flex;
@@ -491,9 +486,15 @@
         letter-spacing: 1px;
         margin-bottom: 5px;
         margin-top: 20px;
+
+        span {
+            font-size: 16px;
+            font-weight: 100;
+        }
     }
     p {
         font-size: 16px;
+        margin-bottom: 15px;
     }
     h2 {
         position: absolute;
@@ -511,22 +512,99 @@
     margin-bottom: 10px;
 }
 
-.uzkodas-img {
+.menu-img {
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
     width: 35%;
-    height: 70%;
+    height: 500px;
     border-radius: 100px 0 0;
+}
+
+.drinks {
+    position: relative;
+}
+
+#uzkodas-img {
     background: url(../assets/image4.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+#soup-img {
+    background: url(../assets/soup.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#pamatediens-img {
+    background: url(../assets/pamatediens.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#saldie-img {
+    background: url(../assets/saldie.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pamatedienu-pogas {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.pamatediena_button {
+    border: none;
+    color: #131313;
+    font-size: 12px;
+    padding-bottom: 10px;
+    width: 100px;
+    background-color: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.galas-page {
+    display: none;
+}
+
+#liellopa-section {
+    display: flex;
+}
+
+.active-pamat-btn {
+    border-bottom: 1px solid #131313;
+    cursor: default;
+}
 
 
-.drinks {
+
+.underline {
     position: relative;
+    display: inline-block;
+    margin: 0;
+}
+
+.underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 1px;
+    background: var(--tan);
+    transition: width 0.5s ease;
+}
+
+.underline:hover::after {
+    width: 100%;
 }

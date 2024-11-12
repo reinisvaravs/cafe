@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lv">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,11 +61,14 @@
             </div>
               <h1>Darba laiks</h1>
               <div class="small-line"></div>
-              <p class="hours">Svētdien - Ceturtdien</p>
+              <p class="hours">Pirmdien - Ceturtdien</p>
               <p class="hours">9.00 - 19.00</p>
                 <br>
               <p class="hours">Piektdien - Sestdien</p>
               <p class="hours">9.00 - 22.00</p>
+                <br>
+              <p class="hours">Svētdien</p>
+              <p class="hours">11.00 - 19.00</p>
               <div id="hours-img"></div>
             </div>
             <div class="phone">
@@ -97,95 +100,361 @@
         </div>
         <h1>Menu</h1>
         <div class="large-line"></div>
-        <div class="menu-buttons">
-          <button class="uzkodas">uzkodas</button>
-          <button class="zupas">zupas</button>
-          <button class="pamatedieni">pamatēdieni</button>
-          <button class="saldie">saldie ēdieni</button>
+        <div class="menu-buttons-div">
+          <button class="menu_button" data-page="uzkodas">uzkodas</button>
+          <button class="menu_button" data-page="zupas">zupas</button>
+          <button class="menu_button" data-page="pamatedieni">pamatēdieni</button>
+          <button class="menu_button" data-page="saldie">saldie ēdieni</button>
         </div>
-        <div class="uzkodas-section">
+        <div class="menu-page" id="uzkodas">
           <div class="menu-item">
             <div class="menu-apraksts">
-              <h1>Vīna uzkodu plate 2 personām</h1>
-              <p>/sieru, gaļas un zivju izlase, siera cepumi, Kalamatas olīvas un augļi/</p>
+              <h1>Liellopa karpočo ar cieto sieru <span>1;7;13</span></h1>
+              <p>/liellops, siers, brušetes, olīveļļa/</p>
             </div>
             <div class="menu-cena">
-              <h2>26 €</h2>
+              <h2>7.50 €</h2>
             </div>
           </div>
           <div class="menu-item">
             <div class="menu-apraksts">
-              <h1>Vīna uzkodu plate 2 personām</h1>
-              <p>/sieru, gaļas un zivju izlase, siera cepumi, Kalamatas olīvas un augļi/</p>
+              <h1>Laša seviče <span>4;13</span></h1>
+              <p>/lasis, avokado, sīpols, laima mērce, baziliks/</p>
             </div>
             <div class="menu-cena">
-              <h2>26 €</h2>
+              <h2>7.50 €</h2>
             </div>
           </div>
           <div class="menu-item">
             <div class="menu-apraksts">
-              <h1>Vīna uzkodu plate 2 personām</h1>
-              <p>/sieru, gaļas un zivju izlase, siera cepumi, Kalamatas olīvas un augļi/</p>
+              <h1>Siera plate <span>1;5;7;8</span></h1>
+              <p>/sieru izlase, grauzdēti rieksti, vīnogas, olīvas/</p>
             </div>
             <div class="menu-cena">
-              <h2>26 €</h2>
+              <h2>9.50 €</h2>
             </div>
           </div>
           <div class="menu-item">
             <div class="menu-apraksts">
-              <h1>Vīna uzkodu plate 2 personām</h1>
-              <p>/sieru, gaļas un zivju izlase, siera cepumi, Kalamatas olīvas un augļi/</p>
+              <h1>Maizes kraukšķi ar burkānu čipsiem <span>1;7;13</span></h1>
+              <p>/ar ķiplociņu un silto siera mērci/</p>
             </div>
             <div class="menu-cena">
-              <h2>26 €</h2>
+              <h2>4.00 €</h2>
             </div>
           </div>
           <div class="menu-item">
             <div class="menu-apraksts">
-              <h1>Vīna uzkodu plate 2 personām</h1>
-              <p>/sieru, gaļas un zivju izlase, siera cepumi, Kalamatas olīvas un augļi/</p>
+              <h1>Fritēto uzkodu plate ar mērci <span>1;7;13</span></h1>
+              <p>/fritētās uzkodas ar saldo čilli mērci/</p>
             </div>
             <div class="menu-cena">
-              <h2>26 €</h2>
+              <h2>5.50 €</h2>
             </div>
           </div>
           <div class="menu-item">
             <div class="menu-apraksts">
-              <h1>Vīna uzkodu plate 2 personām</h1>
-              <p>/sieru, gaļas un zivju izlase, siera cepumi, Kalamatas olīvas un augļi/</p>
+              <h1>Tīģergarneles baltvīna mērcē <span>1;4;7;13</span></h1>
+              <p>/ceptas tīģergarneles saldā krējuma- baltvīna mērcē ar grauzdētu maizi/</p>
             </div>
             <div class="menu-cena">
-              <h2>26 €</h2>
+              <h2>18.20 €</h2>
             </div>
           </div>
-          <div class="menu-item">
-            <div class="menu-apraksts">
-              <h1>Vīna uzkodu plate 2 personām</h1>
-              <p>/sieru, gaļas un zivju izlase, siera cepumi, Kalamatas olīvas un augļi/</p>
-            </div>
-            <div class="menu-cena">
-              <h2>26 €</h2>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-apraksts">
-              <h1>Vīna uzkodu plate 2 personām</h1>
-              <p>/sieru, gaļas un zivju izlase, siera cepumi, Kalamatas olīvas un augļi/</p>
-            </div>
-            <div class="menu-cena">
-              <h2>26 €</h2>
-            </div>
-          </div>
-          <div class="uzkodas-img"></div>
+          <div class="menu-img" id="uzkodas-img"></div>
         </div>
-        <div class="zupas-section">
-          <h1>Zupas</h1>
+        <div class="menu-page" id="zupas">
+          <div class="menu-item">
+            <div class="menu-apraksts">
+              <h1>Kokospiena- tīģergarneļu zupa <span>4;8;13;14</span></h1>
+              <p>/garneles, sēnes, kokosriekstu piens, laims, puravs,čilī/</p>
+            </div>
+            <div class="menu-cena">
+              <h2>8.50 €</h2>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-apraksts">
+              <h1>Soļanka <span>1;7;13</span></h1>
+              <p>/sastāvdaļas tiks precizētas/</p>
+            </div>
+            <div class="menu-cena">
+              <h2>5.90 €</h2>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-apraksts">
+              <h1>Krēmīgā dārzeņu zupa ar grauzdiņiem un bekonu <span>1;7;13</span></h1>
+              <p>/dārzeņi, saldais krējums, grauzdiņi, bekons/</p>
+            </div>
+            <div class="menu-cena">
+              <h2>5.90 €</h2>
+            </div>
+          </div>
+          <div class="menu-img" id="soup-img"></div>
         </div>
-        <div class="pamatedieni-section">
-          <h1>Pamatedieni</h1>
+        <div class="menu-page" id="pamatedieni">
+          <div class="pamatedienu-pogas">
+            <button class="pamatediena_button" data-page="gala">Gaļa</button>
+            <button class="pamatediena_button" data-page="cukas">Cūkgaļa</button>
+            <button class="pamatediena_button" data-page="zivis">Zivis</button>
+            <button class="pamatediena_button" data-page="putna">Putnu gaļa</button>
+            <button class="pamatediena_button" data-page="jera">Jēra gaļa</button>
+          </div>
+          <div class="galas-page" id="gala">
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Urugvajas liellopa striploin steiks <span>0.6 kg</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>38.00 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Urugvajas liellopa antrekota steiks <span>0.45 kg</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>38.00 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>T- bone steiks <span>0.4 kg</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>33.00 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Liellopa karbonāde sinepju marinādē <span>1;3;10</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>9.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Cūkgaļas fileja ar brūkleņu mērci un kartupeļiem <span>1;7;13</span></h1>
+                <p>/cūkgaļas fileja, kartupeļi, dārzeņi, brūkleņu mērce/</p>
+              </div>
+              <div class="menu-cena">
+                <h2>13.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Lēni gatavots sivēna stilbs <span>1;7;12</span></h1>
+                <p>/cūkgaļas fileja, kartupeļi, dārzeņi, brūkleņu mērce/</p>
+              </div>
+              <div class="menu-cena">
+                <h2>13.00 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Lēni gatavots sivēna stilbs <span>1;7;12</span></h1>
+                <p>/cūkgaļas fileja, kartupeļi, dārzeņi, brūkleņu mērce/</p>
+              </div>
+              <div class="menu-cena">
+                <h2>13.00 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Grilēta cūkas kakla karbonāde <span>6;13</span></h1>
+                <p>/cūkgaļas fileja, kartupeļi, dārzeņi, brūkleņu mērce/</p>
+              </div>
+              <div class="menu-cena">
+                <h2>8.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Franču karbonāde <span>1;3;7;13</span></h1>
+                <p>/karbonāde, tomāti, majonēze, siers/</p>
+              </div>
+              <div class="menu-cena">
+                <h2>7.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Karbonāde “Ķēķis” <span>1;3;7;13</span></h1>
+                <p>/karbonāde, burkāni, sīpoli, majonēze, siers/</p>
+              </div>
+              <div class="menu-cena">
+                <h2>7.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Karbonāde ar šampinjoniem un sieru <span>1;3;7;13</span></h1>
+                <p>/karbonāde, šampinjoni, siers/</p>
+              </div>
+              <div class="menu-cena">
+                <h2>7.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Tvaicēta laša fileja <span>4</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>13.00 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Mīdijas baltvīna mērcē ar franču bageti <span>1;4;7;13</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>17.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Zandarta fileja ar laima mērci, piedevām <span>4;7;13</span></h1>
+                <p>/pasniegta ar zaļo zirnīšu un burkānu biezeņiem, salātiem/</p>
+              </div>
+              <div class="menu-cena">
+                <h2>16.30 €</h2>
+              </div>
+            </div>
+          </div>
+          <div class="galas-page" id="cukas">
+            <!-- ... -->
+          </div>
+          <div class="galas-page" id="zivis">
+            <!-- ... -->
+          </div>
+          <div class="galas-page" id="putna">
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Pīles krūtiņa ar apelsīnu mērci un ceptiem ķirbjiem <span>13</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>17.20 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Vistas fileja kaperu mērcē ar piedevām <span>1;7;13;15</span></h1>
+                <p>/pasniegta kopā ar kartupeļiem, kuri pildīti ar sieru, salāti/</p>
+              </div>
+              <div class="menu-cena">
+                <h2>17.70 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Vistas fileja ar sieru un spinātiem <span>7</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>8.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Vistas karbonāde ar sieru un ananasiem <span>1;3;7;13</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>7.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Vistas filejas nageti <span>1;3;7</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>5.50 €</h2>
+              </div>
+            </div>
+          </div>
+          <div class="galas-page" id="jera">
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Jēra karē <span>1;7;13</span></h1>
+                <p>/jēra riba, kartupeļu biezenis, grilēti dārzeņi, saldskābā mērce/</p>
+              </div>
+              <div class="menu-cena">
+                <h2>22.50 €</h2>
+              </div>
+            </div>
+          </div>
+          <div class="menu-img" id="pamatediens-img"></div>
         </div>
-        <div class="saldie-section">
-          <h1>Saldie</h1>
+        <div class="menu-page" id="saldie">
+          <div class="menu-item">
+            <div class="menu-apraksts">
+              <h1>Dienas kūka - jautāt viesmīlim <span></span></h1>
+            </div>
+            <div class="menu-cena">
+              <h2>5.90 €</h2>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-apraksts">
+              <h1>Saldējums <span>7</span></h1>
+            </div>
+            <div class="menu-cena">
+              <h2>4.00 €</h2>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-apraksts">
+              <h1>Saldējuma kokteilis <span>7</span></h1>
+            </div>
+            <div class="menu-cena">
+              <h2>4.00 €</h2>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-apraksts">
+              <h1>Saldējuma kokteilis <span>7</span></h1>
+              <p>/ar putukrējuma cepuri/</p>
+            </div>
+            <div class="menu-cena">
+              <h2>4.50 €</h2>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-apraksts">
+              <h1>Biezpiena pikas ar kazeņu mērci un karamelizētiem riekstiem <span>7;8</span></h1>
+              <p>/biezpiena-putukrējuma deserts ar kazeņu mērci, riekstiem un ogām/</p>
+            </div>
+            <div class="menu-cena">
+              <h2>6.50 €</h2>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-apraksts">
+              <h1>Karstais saldējums <span>1;7</span></h1>
+              <p>/saldējums ar ogu mērci/</p>
+            </div>
+            <div class="menu-cena">
+              <h2>5.90 €</h2>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-apraksts">
+              <h1>Crème brûlée <span>3;7</span></h1>
+            </div>
+            <div class="menu-cena">
+              <h2>5.90 €</h2>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-apraksts">
+              <h1>Ābolu strūdele ar saldējumu <span>1;3;7</span></h1>
+              <p>/ābolu strūdele ar saldējumu un vaniļas mērci/</p>
+            </div>
+            <div class="menu-cena">
+              <h2>5.90 €</h2>
+            </div>
+          </div>
+          <div class="menu-img" id="saldie-img"></div>
         </div>
       </div>
       <div class="drinks">
@@ -201,5 +470,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
   <script src="js/gsap.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

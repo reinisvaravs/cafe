@@ -459,7 +459,7 @@
     cursor: default;
 }
 
-.menu-page, .galas-page {
+.menu-page, .pamat-page {
     width: 95%;
     max-width: 1200px;
     min-height: 500px;
@@ -515,12 +515,13 @@
 .menu-img {
     position: absolute;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 10px;
     width: 35%;
     height: 500px;
     border-radius: 100px 0 0;
 }
+
+
 
 .drinks {
     position: relative;
@@ -545,6 +546,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    top: 80px;
 }
 
 #saldie-img {
@@ -573,7 +576,7 @@
     text-transform: uppercase;
 }
 
-.galas-page {
+.pamat-page {
     display: none;
 }
 
@@ -585,8 +588,6 @@
     border-bottom: 1px solid #131313;
     cursor: default;
 }
-
-
 
 .underline {
     position: relative;

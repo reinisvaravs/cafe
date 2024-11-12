@@ -17,8 +17,8 @@ function showPage(page) {
 
     // reseto galas sekcjas izvelni = displejo liellopgalu
     if (page === "pamatedieni") {
-        document.querySelectorAll(".galas-page").forEach(div => { div.style.display = "none" })
-        document.querySelector("#gala").style.display = "flex"
+        document.querySelectorAll(".pamat-page").forEach(div => { div.style.display = "none" })
+        document.querySelector("#piedevas").style.display = "flex"
         document.querySelectorAll(".pamatediena_button").forEach(button => { button.classList.remove("active-pamat-btn") })
         document.querySelectorAll(`button[data-page="gala"]`).forEach(button => { button.classList.add("active-pamat-btn") })
     }
@@ -44,7 +44,7 @@ window.onload = () => {
 }
 
 function showGalasPage(page) {
-    document.querySelectorAll(".galas-page").forEach(div => {
+    document.querySelectorAll(".pamat-page").forEach(div => {
         div.style.display = "none"
     })
 

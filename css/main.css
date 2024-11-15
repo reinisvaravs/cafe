@@ -246,12 +246,15 @@
     font-size: 22px;
     line-height: 30px;
     font-weight: 400;
-    color: rgba(181, 181, 181, 0.5);
 
     a {
         color: var(--tan);
         text-decoration: none;
         transition: all 0.3s ease;
+
+        span {
+            color: rgba(181, 181, 181, 0.5);
+        }
     }
     a:hover {
         background-color: rgba(181, 181, 181, 0.1);
@@ -345,6 +348,12 @@
     top: 3%;
     left: 50%;
     transform: translateX(-50%);
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+#curtainBtn:hover {
+    color: rgb(180, 180, 180);
+    transition: color 0.3s ease-in;
 }
 
 .section {
@@ -546,8 +555,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    top: 80px;
 }
 
 #saldie-img {
@@ -609,3 +616,46 @@
 .underline:hover::after {
     width: 100%;
 }
+
+.pancakesh1 {
+    border: none;
+}
+
+.pancake1 {
+    margin-left: 30px;
+    width: calc(60% - 30px);
+}
+
+.alergeni {
+    position: absolute;
+    bottom: -35px;
+    right: 5%;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    color: rgb(0, 0, 118);
+    cursor: pointer;
+}
+
+
+.underline-blue {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+
+.underline-blue::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 1px;
+    background: rgb(0, 0, 118);
+    transition: width 0.5s ease;
+}
+
+.underline-blue:hover::after {
+    width: 100%;
+}
+

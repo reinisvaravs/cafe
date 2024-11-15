@@ -20,7 +20,7 @@ function showPage(page) {
         document.querySelectorAll(".pamat-page").forEach(div => { div.style.display = "none" })
         document.querySelector("#piedevas").style.display = "flex"
         document.querySelectorAll(".pamatediena_button").forEach(button => { button.classList.remove("active-pamat-btn") })
-        document.querySelectorAll(`button[data-page="gala"]`).forEach(button => { button.classList.add("active-pamat-btn") })
+        document.querySelectorAll(`button[data-page="piedevas"]`).forEach(button => { button.classList.add("active-pamat-btn") })
     }
 }
 
@@ -62,5 +62,31 @@ function showGalasPage(page) {
 document.querySelectorAll(".pamatediena_button").forEach(button => {
     button.onclick = function() {
         showGalasPage(this.dataset.page)
+    }
+})
+
+
+
+
+
+document.querySelectorAll(".edienkarte-btn").forEach(button => {
+    button.onclick = () => {
+        const a = document.querySelector(".hero").offsetHeight
+        const b = document.querySelector(".about").offsetHeight
+        window.scroll({
+            top: a+b+150, 
+            left: 0, 
+            behavior: 'smooth' 
+        });
+    }
+})
+
+document.querySelectorAll(".gotop").forEach(button => {
+    button.onclick = () => {
+        window.scroll({
+            top: 0, 
+            left: 0, 
+            behavior: 'smooth' 
+        });
     }
 })

@@ -13,7 +13,9 @@
     <div class="header-div">
       <div class="logo-div">
         <div class="banner">
-          <img src="./assets/logo-white.png" class="logo">
+          <button class="gotop">
+            <img src="./assets/logo-white.png" class="logo" draggable="false">
+          </button>
         </div>
       </div>
         <div class="nav L-screen">
@@ -26,7 +28,7 @@
           </ul>
         </div>
       <div class="reserve-div L-screen">
-        <button>Rezervēt</button>
+        <button><a href="tel:+371 27 070 000">Rezervēt</a></button>
       </div>
       <button class="popup-menu M-screen" id="menuBtn">
         <span class="span-menu"></span>
@@ -43,7 +45,7 @@
           <h1>Garšas un sajūtu harmonija</h1>
         </div>
         <div class="hero-btn-div">
-          <button>Ēdienkarte</button>
+          <button class="edienkarte-btn"">Ēdienkarte</button>
         </div>
         <div class="info">
           <div class="address">
@@ -77,7 +79,7 @@
               </div>
               <h1>Zvani un rezervē!</h1>
               <div class="small-line"></div>
-              <p>+371 <a href="tel:+371 27 070 000">27 070 000</a></p>
+              <p class="underline"><a href="tel:+371 27 070 000"><span>+371</span> 27 070 000</a></p>
               <div id="phone-img"></div>
           </div>
         </div>
@@ -85,7 +87,7 @@
     <div class="about">
       <h1>Par mums</h1>
       <div class="medium-line"></div>
-      <h2>Mēs piedāvājam ēdināšanas pakalpojumus semināriem, svētku reizēm un bēru mielastiem, ar iespēju organizēt pasākumus mūsu kafejnīcas telpās vai jūsu izvēlētajā vietā. Pieejamas uzkodas līdznešanai un izbraukuma tirdzniecība pasākumos, kā arī pusdienu piegāde pilsētas robežās, lai nodrošinātu ērtu un gardu maltīti ikdienai.</h2>
+      <h2>Klājam galdus semināriem, svētku reizēm, bēru mielastiem kafejnīcas telpās vai klienta izvēlētā vietā, uzkodas līdznešanai, izbraukuma tirdzniecība pasākumos, pusdienu piegāde pilsētas robežās</h2>
       <div class="about-img"></div>
       <h2 class="curtain-h2">Pie mums vēsture un garša apvienojas, radot gastronomisku garšu baudījumu katrā kumosā.</h2>
     </div>
@@ -161,7 +163,9 @@
               <h2>18.20 €</h2>
             </div>
           </div>
-          <div class="menu-img" id="uzkodas-img"></div>
+          <div class="menu-img" id="uzkodas-img">
+            <button class="alergeni" type="submit" onclick="window.open('./assets/alergeni.pdf')"><p class="underline-blue">Alergēni</p></button>
+          </div>
         </div>
         <div class="menu-page" id="zupas">
           <div class="menu-item">
@@ -191,20 +195,21 @@
               <h2>5.90 €</h2>
             </div>
           </div>
-          <div class="menu-img" id="soup-img"></div>
+          <div class="menu-img" id="soup-img">
+            <button class="alergeni" type="submit" onclick="window.open('./assets/alergeni.pdf')"><p class="underline-blue">Alergēni</p></button>
+          </div>
         </div>
         <div class="menu-page" id="pamatedieni">
           <div class="pamatedienu-pogas">
             <button class="pamatediena_button" data-page="piedevas">piedevas</button>
             <button class="pamatediena_button" data-page="gala">gaļa</button>
-            <button class="pamatediena_button" data-page="page3">page3</button>
-            <button class="pamatediena_button" data-page="page4">page4</button>
-            <button class="pamatediena_button" data-page="page5">page5</button>
+            <button class="pamatediena_button" data-page="salati">salāti</button>
+            <button class="pamatediena_button" data-page="zuljeni">žuljēni</button>
           </div>
           <div class="pamat-page" id="piedevas">
             <div class="menu-item">
               <div class="menu-apraksts">
-                <h1>Vārīti- apcepti kartupeļi / Boiled - fried potatoes <span>1;13</span></h1>
+                <h1>Vārīti-apcepti kartupeļi <span>1;13</span></h1>
               </div>
               <div class="menu-cena">
                 <h2>3.50 €</h2>
@@ -212,10 +217,114 @@
             </div>
             <div class="menu-item">
               <div class="menu-apraksts">
-                <h1>NOSAUKUMS <span>ALERGENI</span></h1>
+                <h1>Frī kartupeļi <span>1;13</span></h1>
               </div>
               <div class="menu-cena">
-                <h2>CENA €</h2>
+                <h2>3.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Rīsi <span>1;7</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>3.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Griķi <span>1;7</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>3.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Grilēti dārzeņi <span>13</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>3.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Dārzeņu salāti <span>13</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>2.00 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Siltā mērce <span>1;7;13</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>1.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Ķiploku-zaļumu mērce <span>3;7</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>1.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Majonēze <span>3;7</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>1.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Tomātu mērce </h1>
+              </div>
+              <div class="menu-cena">
+                <h2>1.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Saldā čilli mērce </h1>
+              </div>
+              <div class="menu-cena">
+                <h2>1.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Krējums <span>7</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>1.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Šokolādes mērce</h1>
+              </div>
+              <div class="menu-cena">
+                <h2>1.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Zemeņu mērce</h1>
+              </div>
+              <div class="menu-cena">
+                <h2>1.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Ievārījums</h1>
+              </div>
+              <div class="menu-cena">
+                <h2>1.50 €</h2>
               </div>
             </div>
           </div>
@@ -391,16 +500,63 @@
               </div>
             </div>
           </div>
-          <div class="pamat-page" id="page3">
-            <!-- ... -->
+          <div class="pamat-page" id="salati">
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Cēzara salāti ar vistas fileju <span>1;3;7;10</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>9.00 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Cēzara salāti ar tīģergarnelēm <span>1;3;4;7;10</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>11.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Siltie pastas salāti ar tīģergarnelēm <span>1;4;7</span></h1>
+                <p>/pasta, zaļās pākšu pupiņas, ķirštomāti, tīģergarneles, siers/</p>
+              </div>
+              <div class="menu-cena">
+                <h2>14.60 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Siltie pastas salāti ar vistas fileju <span>1;7</span></h1>
+                <p>/pasta, zaļās pākšu pupiņas, ķirštomāti, vista, siers/</p>
+              </div>
+              <div class="menu-cena">
+                <h2>11.80 €</h2>
+              </div>
+            </div>
           </div>
-          <div class="pamat-page" id="page4">
-            <!-- ... -->
+          <div class="pamat-page" id="zuljeni">
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Žuljēns ar vistas gaļu <span>7;13</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>6.50 €</h2>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-apraksts">
+                <h1>Žuljēns ar bararvikām <span>7;13</span></h1>
+              </div>
+              <div class="menu-cena">
+                <h2>8.50 €</h2>
+              </div>
+            </div>
           </div>
-          <div class="pamat-page" id="page5">
-            <!-- ... -->
+          <div class="menu-img" id="pamatediens-img">
+            <button class="alergeni" type="submit" onclick="window.open('./assets/alergeni.pdf')"><p class="underline-blue">Alergēni</p></button>
           </div>
-          <div class="menu-img" id="pamatediens-img"></div>
         </div>
         <div class="menu-page" id="saldie">
           <div class="menu-item">
@@ -471,7 +627,55 @@
               <h2>5.90 €</h2>
             </div>
           </div>
-          <div class="menu-img" id="saldie-img"></div>
+          <div class="menu-item pancakesh1">
+            <div class="menu-apraksts">
+              <h1>Kartupeļu pankūkas</h1>
+            </div>
+          </div>
+          <div class="menu-item pancake1">
+            <div class="menu-apraksts">
+              <h1>Ar krējumu <span>1;3;4;7</span></h1>
+            </div>
+            <div class="menu-cena">
+              <h2>6.50 €</h2>
+            </div>
+          </div>
+          <div class="menu-item pancake1">
+            <div class="menu-apraksts">
+              <h1>Ar lasi <span>1;3;7</span></h1>
+            </div>
+            <div class="menu-cena">
+              <h2>8.50 €</h2>
+            </div>
+          </div>
+          <div class="menu-item pancake1">
+            <div class="menu-apraksts">
+              <h1>Ar baraviku mērci <span>1;3;7</span></h1>
+            </div>
+            <div class="menu-cena">
+              <h2>8.50 €</h2>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-apraksts">
+              <h1>Plānās pankūkas <span>1;3;7</span></h1>
+            </div>
+            <div class="menu-cena">
+              <h2>4.00 €</h2>
+            </div>
+          </div>
+          <div class="menu-item pancake1">
+            <div class="menu-apraksts">
+              <h1>Ar sieru un šķiņķi <span>1;3;7</span></h1>
+            </div>
+            <div class="menu-cena">
+              <h2>5.00 €</h2>
+            </div>
+          </div>
+          
+          <div class="menu-img" id="saldie-img">
+            <button class="alergeni" type="submit" onclick="window.open('./assets/alergeni.pdf')"><p class="underline-blue">Alergēni</p></button>
+          </div>
         </div>
       </div>
       <div class="drinks">

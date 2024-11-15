@@ -1,28 +1,48 @@
 console.log("Soļankas sastāvdaļas!")
 
+
 function showPage(page) {
+    // Hide all menu pages
     document.querySelectorAll(".menu-page").forEach(div => {
-        div.style.display = "none"
-    })
+        div.style.display = "none";
+    });
 
-    document.querySelector(`#${page}`).style.display = "flex"
+    // Show the selected page
+    document.querySelector(`#${page}`).style.display = "flex";
 
+    // Remove active class from all buttons
     document.querySelectorAll(".menu_button").forEach(button => {
-        button.classList.remove("active-menu-btn")
-    })
+        button.classList.remove("active-menu-btn");
+    });
 
+    // Add active class to the button of the selected page
     document.querySelectorAll(`button[data-page="${page}"]`).forEach(button => {
-        button.classList.add("active-menu-btn")
-    })
+        button.classList.add("active-menu-btn");
+    });
 
-    // reseto galas sekcjas izvelni = displejo liellopgalu
+    // Dynamically update the background image
+    const menuImg = document.querySelector(".menu-img");
+    if (menuImg) {
+        menuImg.className = "menu-img"; // Reset class
+        menuImg.classList.add(`${page}-img`);
+    }
+
+    // Reset the default "pamatedieni" submenu behavior
     if (page === "pamatedieni") {
-        document.querySelectorAll(".pamat-page").forEach(div => { div.style.display = "none" })
-        document.querySelector("#piedevas").style.display = "flex"
-        document.querySelectorAll(".pamatediena_button").forEach(button => { button.classList.remove("active-pamat-btn") })
-        document.querySelectorAll(`button[data-page="piedevas"]`).forEach(button => { button.classList.add("active-pamat-btn") })
+        document.querySelectorAll(".pamat-page").forEach(div => {
+            div.style.display = "none";
+        });
+        document.querySelector("#piedevas").style.display = "flex";
+        document.querySelectorAll(".pamatediena_button").forEach(button => {
+            button.classList.remove("active-pamat-btn");
+        });
+        document.querySelectorAll(`button[data-page="piedevas"]`).forEach(button => {
+            button.classList.add("active-pamat-btn");
+        });
     }
 }
+
+
 
 document.querySelectorAll(".menu_button").forEach(button => {
     button.onclick = function() {

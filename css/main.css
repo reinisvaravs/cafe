@@ -471,6 +471,10 @@
     margin-bottom: 200px;
 }
 
+#uzkodas {
+    display: flex;
+}
+
 .menu-item {
     width: 60%;
     position: relative;
@@ -531,14 +535,14 @@
 }
 
 #uzkodas-img {
-    background: url(../assets/image4.jpg);
+    background: url(../assets/uzkodas.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-#soup-img {
-    background: url(../assets/soup.jpg);
+#zupas-img {
+    background: url(../assets/zupas.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -551,7 +555,7 @@
     background-repeat: no-repeat;
 }
 
-#saldie-img {
+#saldieEdieni-img {
     background: url(../assets/saldie.jpg);
     background-size: cover;
     background-position: center;

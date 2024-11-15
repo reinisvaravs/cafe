@@ -57,20 +57,28 @@ header {
         width: 100%;
         height: 100%;
         list-style: none;
-        color: #8e9399;
-        font-size: 20px;
-        letter-spacing: 1px;
-        font-weight: 100;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         flex-direction: row;
         flex-wrap: nowrap;
-
-        li {
-            cursor: pointer;
-        }
     }
+}
+
+.nav ul li button {
+    background: transparent;
+    border: none;
+    color: #8e9399;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 100;
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+
+.nav ul li button:hover {
+    color: white;
+    transition: color 0.3s ease;
 }
 
 .reserve-div {
@@ -84,13 +92,18 @@ header {
         height: 48px;
         background-color: var(--tan);
         font-size: 16px;
-        border: none;
+        border: 1px solid var(--tan);
         cursor: pointer;
+        transition: background 0.5s ease;
 
         a {
             text-decoration: none;
             color: white;
         }
+    }
+    button:hover {
+        transition: background 0.3s ease;
+        background-color: rgba(181, 152, 108, 0.8);
     }
 }
 

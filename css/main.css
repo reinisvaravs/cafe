@@ -296,6 +296,7 @@
         margin: 10px 5%;
         line-height: 40px;
         max-width: 1300px;
+        padding-top: 40px;
     }
     .curtain-h2 {
         color: #8e9399;
@@ -358,7 +359,7 @@
 
 .section {
     z-index: 1;
-    height: 30vh;
+    height: 20vh;
     width: 100%;
     background-color: #131313;
     position: relative;
@@ -380,14 +381,6 @@
 
 .no-shadow::before {
     box-shadow: none;
-}
-
-
-
-.new-header {
-    width: 100%;
-    height: 20vh;
-    background-color: #161c22;
 }
 
 
@@ -534,6 +527,7 @@
 
 .drinks {
     position: relative;
+    height: 50vh;
 }
 
 #uzkodas-img {

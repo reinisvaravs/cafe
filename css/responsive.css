@@ -1,0 +1,106 @@
+@media screen and (max-width: 1000px) {
+
+    /* --- HERO --- */
+
+    .L-screen {
+        display: none;
+    }
+    .M-screen {
+        display: block;
+    }
+    .popup-menu {
+        position: fixed;
+        top: 25x;
+        right: 25px;
+        width: 4vw;
+        height: 4vw;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: transparent;
+        border: none;
+        z-index: 1;
+    }
+    .span-menu {
+        border-bottom: 1px solid white;
+        width: 100%;
+    }
+    .popup {
+        height: 100vh;
+        width: 50vw;
+        position: absolute;
+        top: 0;
+        right: -10px;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(3px);
+        transform: translateX(100%);
+    }
+    .logo-btn {
+        width: clamp(110px, 15%, 150px);
+    
+        .logo {
+            width: clamp(110px, 15%, 150px);
+        }
+    }
+
+    /* --- INFO --- */
+
+    .info {
+        flex-direction: column;
+        height: 140vh;
+        top: 88%;
+    }
+    .address, .working-hours, .phone {
+        height: 30%;
+        width: 95%;
+        margin: 0 auto;
+        background: linear-gradient(180deg, #171d24, #141414);
+    }
+    #address-img, #hours-img, #phone-img {
+        display: none;
+    }
+    .address {
+        height: 21%;
+    }
+    .working-hours {
+        height: 38%;
+        margin: -95px auto 0 auto;
+    }
+    .phone {
+        height: 20%;
+        margin: -95px auto 0 auto;
+    }
+    .small-line {
+        margin: 10px 0 15px 04;
+    }
+    .about {
+        margin-top: 1050px;
+    }
+
+    /* --- MENU --- */
+
+    .menu-img, .drinks-img {
+        display: none;
+    }
+    .menu-item {
+        width: 100%;
+    }
+    .menu-apraksts {
+        h1 {
+            font-size: clamp(14px, 3vw, 20px);
+        }
+        p {
+            font-size: clamp(9px, 2vw, 16px);
+        }
+    }
+    .menu-cena h2 {
+        font-size: clamp(12px, 4vw, 30px);
+    }
+    .menu_button {
+        font-size: clamp(8px, 3vw, 24px);
+        padding-bottom: 7px;
+        padding-top: 7px;
+    }
+}

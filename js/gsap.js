@@ -12,7 +12,7 @@ curtainBtn.onclick = function() {
     document.querySelector(".curtain-h2").style.display = "block"
 
     gsap.to(".curtain", {
-        y: 0,
+        y: -100,
         duration: 1,
         ease: "power1.inOut",
     })
@@ -22,10 +22,15 @@ curtainBtn.onclick = function() {
         ease: "power1.inOut",
     })
     gsap.to(".section", {
-        delay: 1,
         onComplete: () => {
             document.querySelector(".section").classList.add("no-shadow");
-        }
+        },
+        duration: 0.5,
+    });
+    gsap.to(".section", {
+        height: "0vh",
+        duration: 0.5,
+        delay: 1.2,
     });
 }
 

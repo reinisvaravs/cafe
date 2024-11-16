@@ -74,8 +74,6 @@ const menuData = {
 
 function renderAllItems(category, containerId) {
     const container = document.getElementById(containerId);
-    console.log(`Rendering ${category} into #${containerId}`);
-    console.log(container);
 
     if (!container) {
         console.error(`Container with ID '${containerId}' not found.`);
@@ -113,8 +111,6 @@ function renderAllItems(category, containerId) {
 
 function renderAllItemsPamat(category, containerId) {
     const container = document.getElementById(containerId);
-    console.log(`Rendering ${category} into #${containerId}`);
-    console.log(container);
 
     if (!container) {
         console.error(`Container with ID '${containerId}' not found.`);
@@ -139,8 +135,6 @@ function renderAllItemsPamat(category, containerId) {
         `;
         container.innerHTML += menuItemHTML;
     });
-
-    console.log(`${category} items rendered.`);
 }
 
 

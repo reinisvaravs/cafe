@@ -2,7 +2,7 @@ header {
     width: 100vw;
     height: 90px;
     position: fixed;
-    background-color: #131313;
+    background-color: var(--darkgray);
     z-index: 5;
 }
 
@@ -19,34 +19,24 @@ header {
     position: relative;
 }
 
-.logo-div {
+.logo-btn {
     width: 15%;
-    height: 100%;
-    display: flex;
-    justify-content: left;
-}
+    max-height: 90%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 
-.banner {
-    background-color: transparent;
-    width: 140px;
-    height: 100%;
-    position: relative;
-
-    button {
-        background: transparent;
-        border: none;
-        cursor: pointer;
+    .logo {
+        width: 15%;
+        max-height: 90%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-45%);
     }
 }
 
-.logo {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-}
 
 .nav {
     width: 60%;
@@ -109,42 +99,4 @@ header {
 
 .M-screen {
     display: none;
-}
-
-@media screen and (max-width: 1000px) {
-    .L-screen {
-        display: none;
-    }
-    .M-screen {
-        display: block;
-    }
-    .popup-menu {
-        position: fixed;
-        top: 25x;
-        right: 25px;
-        width: 4vw;
-        height: 4vw;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        background-color: transparent;
-        border: none;
-        z-index: 1;
-    }
-    .span-menu {
-        border-bottom: 1px solid white;
-        width: 100%;
-    }
-    .popup {
-        height: 100vh;
-        width: 50vw;
-        position: absolute;
-        top: 0;
-        right: -10px;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(3px);
-        transform: translateX(100%);
-    }
 }

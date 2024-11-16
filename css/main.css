@@ -37,8 +37,8 @@
 
         h1 {
             color: white;
-            font-size: 75px;
-            font-weight: 100;
+            font-size: clamp(50px, 10vw, 80px);
+            font-weight: 500;
             letter-spacing: 1px;
             width: 100%;
             max-width: 1200px;
@@ -57,11 +57,11 @@
         transform: translateY(-250px);
 
         button {
-            width: 270px;
-            height: 70px;
+            width: clamp(160px, 20vw, 250px);
+            height: clamp(60px, 5vw, 80px);
             background-color: transparent;
             border: 1px solid gray;
-            font-size: 20px;
+            font-size: clamp(14px, 2vw, 20px);
             color: white;
             letter-spacing: 1px;
             transition: all 0.3s ease;
@@ -83,7 +83,7 @@
     transform: translateY(-100px);
     width: 95vw;
     max-width: 1300px;
-    height: 65vh;
+    height: 70vh;
     position: absolute;
     top: 95%;
     left: 0;
@@ -111,6 +111,8 @@
         letter-spacing: 1px;
         font-weight: 600;
         line-height: 50px;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
 
@@ -245,7 +247,6 @@
 .phone p {
     font-size: 22px;
     line-height: 30px;
-    font-weight: 400;
 
     a {
         color: var(--tan);
@@ -350,18 +351,19 @@
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
-    transition: color 0.5s ease;
+    transition: all 0.5s ease;
+    font-family: 'Boska', serif;
 }
 #curtainBtn:hover {
     color: rgb(180, 180, 180);
-    transition: color 0.3s ease-in;
+    transition: all 0.3s ease-in;
 }
 
 .section {
     z-index: 1;
     height: 20vh;
     width: 100%;
-    background-color: #131313;
+    background-color: var(--darkgray);
     position: relative;
     padding-top: 150px;
     padding-bottom: 50px;
@@ -374,7 +376,7 @@
     left: 0;
     width: 100%;
     height: 30px;
-    box-shadow: 0 -30px 100px 60px #131313;
+    box-shadow: 0 -30px 100px 60px var(--darkgray);
     pointer-events: none;
 }
 
@@ -385,12 +387,12 @@
 
 
 
-/* === BANKETI === */
+/* === MENU === */
 
 
 
 .menu {
-    background-color: #f6ede0;
+    background-color: #f0e8dd;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -401,7 +403,7 @@
         color: var(--tan);
         font-size: 50px;
         margin-bottom: 20px;
-        margin-top: 100px;
+        margin-top: 130px;
     }
 }
 
@@ -413,7 +415,7 @@
     width: 140px;
     height: 140px;
     border-radius: 200px;
-    background: linear-gradient(135deg, #342e25, #131313);
+    background: linear-gradient(135deg, #342e25, var(--darkgray));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -427,7 +429,7 @@
 
 
 .large-line {
-    margin: 20px 0 30px 0;
+    margin-bottom: 30px;
     width: 100px;
     border-bottom: 1px solid var(--tan);
 }
@@ -437,7 +439,6 @@
     margin: auto;
     max-width: 1200px;
     height: 100px;
-    margin-top: 30px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -450,25 +451,32 @@
     color: var(--tan);
     font-size: 22px;
     padding-bottom: 20px;
+    padding-top: 20px;
     width: 150px;
     background-color: transparent;
     cursor: pointer;
+    transition: all 0.5s ease;
+}
+.menu_button:hover {
+    transition: all 0.2s ease;
+    background-color: rgba(176, 148, 107, 0.1);
 }
 
+
 .active-menu-btn {
-    color: #131313;
-    border-bottom: 1px solid #131313;
+    color: var(--darkgray);
+    border-bottom: 1px solid var(--darkgray);
     cursor: default;
 }
 
-.menu-page, .pamat-page {
+.menu-page, .pamat-page, .drinks-page {
     width: 95%;
     max-width: 1200px;
     min-height: 500px;
     flex-direction: column;
     position: relative;
     display: none;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
 #uzkodas {
@@ -572,13 +580,20 @@
 
 .pamatediena_button {
     border: none;
-    color: #131313;
+    color: var(--darkgray);
     font-size: 12px;
     padding-bottom: 10px;
+    padding-top: 10px;
     width: 100px;
     background-color: transparent;
     cursor: pointer;
     text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+.pamatediena_button:hover {
+    transition: all 0.2s ease;
+    background-color: rgba(176, 148, 107, 0.3);
 }
 
 .pamat-page {
@@ -590,8 +605,9 @@
 }
 
 .active-pamat-btn {
-    border-bottom: 1px solid #131313;
+    border-bottom: 1px solid var(--darkgray);
     cursor: default;
+    background-color: rgba(176, 148, 107, 0.1);
 }
 
 .underline {
@@ -608,7 +624,7 @@
     width: 0;
     height: 1px;
     background: var(--tan);
-    transition: width 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .underline:hover::after {
@@ -650,10 +666,72 @@
     width: 0;
     height: 1px;
     background: rgb(0, 0, 118);
-    transition: width 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .underline-blue:hover::after {
     width: 100%;
 }
 
+
+.drinks {
+    background-color: var(--darkgray);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    h1 {
+        color: var(--tan);
+        font-size: 50px;
+        margin-bottom: 20px;
+        margin-top: 130px;
+    }
+}
+
+
+
+.drink_button {
+    border: none;
+    color: var(--tan);
+    font-size: 22px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 150px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.drink_button:hover {
+    transition: all 0.2s ease;
+    background-color: rgba(176, 148, 107, 0.1);
+}
+
+
+.active-drink-btn {
+    color: white;
+    border-bottom: 1px solid white;
+    cursor: default;
+}
+
+
+.drinks-img {
+    position: absolute;
+    right: 0;
+    top: 400px;
+    width: clamp(120px, 35vw, 450px);
+    height: clamp(120px, 35vw, 450px);
+    border-radius: 100px 0 0;
+}
+
+#vins-img {
+    background: url(../assets/vins.jpg);
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+/* .drink-item {
+
+} */

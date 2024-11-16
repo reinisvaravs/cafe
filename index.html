@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ķēķis | Kafejnīca</title>
+  
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@300&f[]=boska@300,500&f[]=switzer@400&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
   <header>
     <div class="header-div">
-      <div class="logo-div">
-        <div class="banner">
-          <button class="gotop">
-            <img src="./assets/logo-white.png" class="logo" draggable="false">
-          </button>
-        </div>
-      </div>
+      <button class="gotop logo-btn">
+        <img src="./assets/logo-white.png" class="logo" draggable="false">
+      </button>
         <div class="nav L-screen">
           <ul>
             <li><button class="edienkarte-btn">Ēdienkarte</button></li>
@@ -39,6 +39,8 @@
     </div>
   </header>
   <main>
+
+
     <div class="hero">
       <div class="bg"></div>
         <div class="hero-h1-div">
@@ -84,22 +86,28 @@
           </div>
         </div>
     </div>
+
+
     <div class="about">
       <h1>Par mums</h1>
       <div class="medium-line"></div>
-      <h2>Klājam galdus semināriem, svētku reizēm, bēru mielastiem kafejnīcas telpās vai klienta izvēlētā vietā, uzkodas līdznešanai, izbraukuma tirdzniecība pasākumos, pusdienu piegāde pilsētas robežās</h2>
+      <h2><i>Klājam galdus semināriem, svētku reizēm, bēru mielastiem kafejnīcas telpās vai klienta izvēlētā vietā, uzkodas līdznešanai, izbraukuma tirdzniecība pasākumos, pusdienu piegāde pilsētas robežās</i></h2>
       <div class="about-img"></div>
-      <h2 class="curtain-h2">Pie mums vēsture un garša apvienojas, radot gastronomisku garšu baudījumu katrā kumosā.</h2>
+      <h2 class="curtain-h2"><i>Pie mums vēsture un garša apvienojas, radot gastronomisku garšu baudījumu katrā kumosā.</i></h2>
     </div>
+
+
     <div class="curtain">
       <div class="section">
         <button id="curtainBtn">Uzzināt vairāk!</button>
       </div>
+
+
       <div class="menu">
         <div class="big-icon-div">
           <img src="./assets/chef-hat.webp" class="big-icon">
         </div>
-        <h1>Menu</h1>
+        <h1>Ēdienkarte</h1>
         <div class="large-line"></div>
         <div class="menu-buttons-div">
           <button class="menu_button" data-page="uzkodas">uzkodas</button>
@@ -157,11 +165,39 @@
 
 
       </div>
+
+
       <div class="drinks">
         <div class="big-icon-div">
-          <img src="./assets/chef-hat.webp" class="big-icon">
+          <img src="./assets/drinks.png" class="big-icon">
         </div>
+        <h1>Dzērieni</h1>
+        <div class="large-line"></div>
+        <div class="menu-buttons-div">
+          <button class="drink_button" data-page="vins">vīns</button>
+          <button class="drink_button" data-page="stiprie">stiprie dzērieni</button>
+          <button class="drink_button" data-page="bezalk">bezalkaholiskie</button>
+        </div>
+
+        <div class="drinks-page" id="vins">
+          <div class="drink-item"></div>
+        </div>
+
+
+        <div class="drinks-page" id="stiprie">
+          <h1>Stiprie dzērieni</h1>
+        </div>
+
+
+        <div class="drinks-page" id="bezalk">
+          <h1>Bezalkaholiskie dzērieni</h1>
+        </div>
+
+
+        <div class="drinks-img" id="vins-img"></div>
       </div>
+
+
     </div>
   </main>
   <footer></footer>

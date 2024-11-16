@@ -9,13 +9,34 @@ html, body {
 }
 
 body {
-    background-color: #131313;
+    background-color: var(--darkgray);
 }
 
 main, header, footer {
     width: calc(100vw - 15px);
 }
 
-:root {
-    --tan: #b5986c;
+main {
+    margin-top: -100px;
 }
+
+:root {
+    --tan: #b0946b;
+    --darkgray: #121212;
+}
+
+h1, h2 {
+    font-family: 'Boska', serif;
+}
+p, button {
+    font-family: 'General Sans', sans-serif;
+}
+
+/*
+    FONTS:
+
+    font-family: 'Boska', serif;
+    font-family: 'General Sans', sans-serif;
+        font-family: 'Switzer', sans-serif;
+        
+*/

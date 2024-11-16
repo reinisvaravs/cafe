@@ -54,13 +54,9 @@ window.onload = () => {
     document.querySelector(`button[data-page="uzkodas"]`).classList.add("active-menu-btn")
     document.querySelector("#uzkodas").style.display = "flex"
 
-    document.querySelectorAll(".menu_button").forEach(button => {
-        button.classList.add("underline")
-    })
 
-    document.querySelectorAll(".pamatediena_button").forEach(button => {
-        button.classList.add("underline")
-    })
+    document.querySelector(`button[data-page="vins"]`).classList.add("active-drink-btn")
+    document.querySelector("#vins").style.display = "flex"
 }
 
 function showGalasPage(page) {
@@ -85,6 +81,29 @@ document.querySelectorAll(".pamatediena_button").forEach(button => {
     }
 })
 
+
+
+function showDrinksPage(page) {
+    document.querySelectorAll(".drinks-page").forEach(div => {
+        div.style.display = "none"
+    })
+
+    document.querySelector(`#${page}`).style.display = "flex"
+
+    document.querySelectorAll(".drink_button").forEach(button => {
+        button.classList.remove("active-drink-btn")
+    })
+
+    document.querySelectorAll(`button[data-page="${page}"]`).forEach(button => {
+        button.classList.add("active-drink-btn")
+    })
+}
+
+document.querySelectorAll(".drink_button").forEach(button => {
+    button.onclick = function() {
+        showDrinksPage(this.dataset.page)
+    }
+})
 
 
 

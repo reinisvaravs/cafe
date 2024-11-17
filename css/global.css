@@ -25,7 +25,7 @@ main {
     --darkgray: #121212;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'Boska', serif;
 }
 p, button {

@@ -4,41 +4,41 @@ console.log("Soļankas sastāvdaļas!")
 function showPage(page) {
     // Hide all menu pages
     document.querySelectorAll(".menu-page").forEach(div => {
-        div.style.display = "none";
-    });
+        div.style.display = "none"
+    })
 
     // Show the selected page
-    document.querySelector(`#${page}`).style.display = "flex";
+    document.querySelector(`#${page}`).style.display = "flex"
 
     // Remove active class from all buttons
     document.querySelectorAll(".menu_button").forEach(button => {
-        button.classList.remove("active-menu-btn");
-    });
+        button.classList.remove("active-menu-btn")
+    })
 
     // Add active class to the button of the selected page
     document.querySelectorAll(`button[data-page="${page}"]`).forEach(button => {
-        button.classList.add("active-menu-btn");
-    });
+        button.classList.add("active-menu-btn")
+    })
 
     // Dynamically update the background image
-    const menuImg = document.querySelector(".menu-img");
+    const menuImg = document.querySelector(".menu-img")
     if (menuImg) {
-        menuImg.className = "menu-img"; // Reset class
-        menuImg.classList.add(`${page}-img`);
+        menuImg.className = "menu-img" // Reset class
+        menuImg.classList.add(`${page}-img`)
     }
 
     // Reset the default "pamatedieni" submenu behavior
     if (page === "pamatedieni") {
         document.querySelectorAll(".pamat-page").forEach(div => {
-            div.style.display = "none";
-        });
-        document.querySelector("#piedevas").style.display = "flex";
+            div.style.display = "none"
+        })
+        document.querySelector("#piedevas").style.display = "flex"
         document.querySelectorAll(".pamatediena_button").forEach(button => {
-            button.classList.remove("active-pamat-btn");
-        });
+            button.classList.remove("active-pamat-btn")
+        })
         document.querySelectorAll(`button[data-page="piedevas"]`).forEach(button => {
-            button.classList.add("active-pamat-btn");
-        });
+            button.classList.add("active-pamat-btn")
+        })
     }
 }
 
@@ -50,14 +50,6 @@ document.querySelectorAll(".menu_button").forEach(button => {
     }
 })
 
-window.onload = () => {
-    document.querySelector(`button[data-page="uzkodas"]`).classList.add("active-menu-btn")
-    document.querySelector("#uzkodas").style.display = "flex"
-
-
-    document.querySelector(`button[data-page="vins"]`).classList.add("active-drink-btn")
-    document.querySelector("#vins").style.display = "flex"
-}
 
 function showGalasPage(page) {
     document.querySelectorAll(".pamat-page").forEach(div => {
@@ -116,7 +108,7 @@ document.querySelectorAll(".edienkarte-btn").forEach(button => {
             top: a+b+150, 
             left: 0, 
             behavior: 'smooth' 
-        });
+        })
     }
 })
 
@@ -126,6 +118,50 @@ document.querySelectorAll(".gotop").forEach(button => {
             top: 0, 
             left: 0, 
             behavior: 'smooth' 
-        });
+        })
     }
 })
+
+
+
+
+
+let currentOpenCategory = null;
+
+function showCategoryItems(category) {
+    const currentCategoryDiv = document.querySelector(`#${category}`);
+    
+    if (!currentCategoryDiv) {
+        console.error(`Category with ID '${category}' not found.`);
+        return; 
+    }
+
+    if (currentOpenCategory === category) {
+        currentCategoryDiv.style.maxHeight = null;
+        currentOpenCategory = null;
+    } else {
+        document.querySelectorAll(".drink-items").forEach(div => {
+            div.style.maxHeight = null;
+        });
+
+        currentCategoryDiv.style.maxHeight = `${currentCategoryDiv.scrollHeight}px`;
+        currentOpenCategory = category;
+    }
+}
+
+document.querySelectorAll(".category-btn").forEach(button => {
+    button.onclick = function () {
+        showCategoryItems(this.dataset.subcategory);
+    };
+});
+
+
+
+window.onload = () => {
+    document.querySelector(`button[data-page="uzkodas"]`).classList.add("active-menu-btn")
+    document.querySelector("#uzkodas").style.display = "flex"
+
+
+    document.querySelector(`button[data-page="vins"]`).classList.add("active-drink-btn")
+    document.querySelector("#vins").style.display = "flex"
+}

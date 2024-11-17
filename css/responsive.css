@@ -103,4 +103,15 @@
         padding-bottom: 7px;
         padding-top: 7px;
     }
+
+    /* --- DRINKS --- */
+
+    .drink-category-div {
+        width: 100%;
+    }
+
+    .drink-items {
+        width: 95%;
+        margin: 0 auto;
+    }
 }

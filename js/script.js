@@ -165,3 +165,5 @@ window.onload = () => {
     document.querySelector(`button[data-page="vins"]`).classList.add("active-drink-btn")
     document.querySelector("#vins").style.display = "flex"
 }
+
+

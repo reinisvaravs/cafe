@@ -6,6 +6,9 @@
   <title>Ķēķis | Kafejnīca</title>
   
   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@300&f[]=boska@300,500&f[]=switzer@400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="css/header.css">
@@ -107,7 +110,7 @@
         <div class="big-icon-div">
           <img src="./assets/chef-hat.webp" class="big-icon">
         </div>
-        <h1>Ēdienkarte</h1>
+        <h1 class="edienkarte-h1">Ēdienkarte</h1>
         <div class="large-line"></div>
         <div class="menu-buttons-div">
           <button class="menu_button" data-page="uzkodas">uzkodas</button>
@@ -139,6 +142,7 @@
             <button class="pamatediena_button" data-page="piedevas">piedevas</button>
             <button class="pamatediena_button" data-page="gala">gaļa</button>
             <button class="pamatediena_button" data-page="salati">salāti</button>
+            <button class="pamatediena_button" data-page="pankukas">pankūkas</button>
             <button class="pamatediena_button" data-page="zuljeni">žuljēni</button>
           </div>
 
@@ -146,6 +150,7 @@
           <div class="pamat-page" id="piedevas"></div>
           <div class="pamat-page" id="gala"></div>
           <div class="pamat-page" id="salati"></div>
+          <div class="pamat-page" id="pankukas"></div>
           <div class="pamat-page" id="zuljeni"></div>
 
 
@@ -174,126 +179,20 @@
         <h1>Dzērieni</h1>
         <div class="large-line"></div>
         <div class="menu-buttons-div" style="margin: 20px 0 100px 0;">
-          <button class="drink_button" data-page="vins">vīns</button>
-          <button class="drink_button" data-page="stiprie">stiprie dzērieni</button>
+          <button class="drink_button" data-page="dzirkstosieViniUnSampaniesi">dzirkstošie vīni un šampanieši</button>
+          <button class="drink_button" data-page="vini">vīns</button>
+          <button class="drink_button" data-page="stiprieAlkoholiskie">stiprie un alkaholiskie</button>
+          <button class="drink_button" data-page="vieglieAlkoholiskie">vieglie un alkaholiskie</button>
           <button class="drink_button" data-page="kokteili">kokteiļi</button>
         </div>
 
-        <div class="drinks-page" id="vins">
-
-          <!-- Šampanietis -->
-          <div class="drink-category-div">
-              <h2>Šampanietis</h2>
-              <div class="plus">
-                <div class="horizontal"></div>
-                <div class="vertical"></div>
-              </div>
-              <button data-category="vini" data-subcategory="sampanietis" class="category-btn"></button>
-          </div>
-          <div class="drink-items" id="sampanietis"></div>
-      
-          <!-- Dzirkstošie vīni -->
-          <div class="drink-category-div">
-              <h2>Dzirkstošie vīni</h2>
-              <div class="plus">
-                <div class="horizontal"></div>
-                <div class="vertical"></div>
-              </div>
-              <button data-category="vini" data-subcategory="dzirkstosie" class="category-btn"></button>
-          </div>
-          <div class="drink-items" id="dzirkstosie"></div>
-
-          <!-- Sarkanvīns -->
-          <div class="drink-category-div">
-            <h2>Sarkanvīns</h2>
-            <div class="plus">
-              <div class="horizontal"></div>
-              <div class="vertical"></div>
-            </div>
-            <button data-category="vini" data-subcategory="sarkanvins" class="category-btn"></button>
-          </div>
-          <div class="drink-items" id="sarkanvins"></div>
-
-          <!-- Baltvīns -->
-          <div class="drink-category-div">
-            <h2>Baltvīns</h2>
-            <div class="plus">
-              <div class="horizontal"></div>
-              <div class="vertical"></div>
-            </div>
-            <button data-category="vini" data-subcategory="baltvins" class="category-btn"></button>
-          </div>
-          <div class="drink-items" id="baltvins"></div>
-
-        </div>    
+        <div class="drinks-page" id="dzirkstosieViniUnSampaniesi"></div>
+        <div class="drinks-page" id="vini"></div>    
+        <div class="drinks-page" id="stiprieAlkoholiskie"></div>
+        <div class="drinks-page" id="vieglieAlkoholiskie"></div>
+        <div class="drinks-page" id="kokteili"></div>
 
 
-        <div class="drinks-page" id="stiprie">
-
-          <!-- Konjaks -->
-          <div class="drink-category-div">
-              <h2>Konjaks</h2>
-              <div class="plus">
-                <div class="horizontal"></div>
-                <div class="vertical"></div>
-              </div>
-              <button data-category="stiprieUnAperitivi" data-subcategory="konjaks" class="category-btn"></button>
-          </div>
-          <div class="drink-items" id="konjaks"></div>
-      
-          <!-- Viskijs -->
-          <div class="drink-category-div">
-              <h2>Viskijs</h2>
-              <div class="plus">
-                <div class="horizontal"></div>
-                <div class="vertical"></div>
-              </div>
-              <button data-category="stiprieUnAperitivi" data-subcategory="viskijs" class="category-btn"></button>
-          </div>
-          <div class="drink-items" id="viskijs"></div>
-
-          <!-- Rums -->
-          <div class="drink-category-div">
-            <h2>Rums</h2>
-            <div class="plus">
-              <div class="horizontal"></div>
-              <div class="vertical"></div>
-            </div>
-            <button data-category="stiprieUnAperitivi" data-subcategory="rums" class="category-btn"></button>
-          </div>
-          <div class="drink-items" id="rums"></div>
-          
-        </div>
-
-
-        <div class="drinks-page" id="kokteili">
-
-          <!-- Alkoholiskie kokteiļi -->
-          <div class="drink-category-div">
-              <h2>Alkoholiskie kokteiļi</h2>
-              <div class="plus">
-                <div class="horizontal"></div>
-                <div class="vertical"></div>
-              </div>
-              <button data-category="kokteili" data-subcategory="alkoholiskieKokteili" class="category-btn"></button>
-          </div>
-          <div class="drink-items" id="alkoholiskieKokteili"></div>
-      
-          <!-- Bezalkoholiskie kokteiļi -->
-          <div class="drink-category-div">
-              <h2>Bezalkoholiskie kokteiļi</h2>
-              <div class="plus">
-                <div class="horizontal"></div>
-                <div class="vertical"></div>
-              </div>
-              <button data-category="kokteili" data-subcategory="bezalkoholiskieKokteili" class="category-btn"></button>
-          </div>
-          <div class="drink-items" id="bezalkoholiskieKokteili"></div>
-          
-        </div>
-
-
-        <div class="drinks-img" id="vins-img"></div>
       </div>
 
 

@@ -118,6 +118,7 @@
     }
 }
 
+
 .icon-div {
     position: absolute;
     top: 0;
@@ -292,6 +293,7 @@
         color: var(--tan);
         font-size: 50px;
         margin-bottom: 20px;
+        margin-top: 100px;
     }
     h2 {
         color: #8e9399;
@@ -755,6 +757,7 @@
         color: white;
         font-size: 20px;
         font-family: 'Boska', serif;
+        text-transform: uppercase;
     }
     h3 {
         color: white;

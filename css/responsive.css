@@ -51,6 +51,7 @@
         flex-direction: column;
         height: 140vh;
         top: 88%;
+        transform: translateY(10px);
     }
     .address, .working-hours, .phone {
         height: 30%;
@@ -66,11 +67,11 @@
     }
     .working-hours {
         height: 38%;
-        margin: -95px auto 0 auto;
+        margin: 20px auto 0 auto;
     }
     .phone {
         height: 20%;
-        margin: -95px auto 0 auto;
+        margin: 20px auto 100px auto;
     }
     .small-line {
         margin: 10px 0 15px 04;

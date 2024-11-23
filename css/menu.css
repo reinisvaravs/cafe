@@ -358,6 +358,7 @@
         color: #f0e8dd;
         font-size: clamp(12px, 2vw, 16px);
         font-weight: 100;
+        margin-top: 10px;
     }
     .description {
         color: #f0e8dd;

@@ -184,3 +184,23 @@ document.querySelector("#curtainBtn").onclick = () => {
         duration: 2,
     })
 }
+
+
+
+const latLink = document.getElementById('latBtn');
+const engLink = document.getElementById('engBtn');
+
+if (document.documentElement.lang === "lv") {
+    latLink.classList.add("active-lang")
+    latLink.classList.remove("disabled-lang")
+
+    engLink.classList.remove("active-lang")
+    engLink.classList.add("disabled-lang")
+} 
+else {
+    engLink.classList.add("active-lang")
+    engLink.classList.remove("disabled-lang")
+
+    latLink.classList.remove("active-lang")
+    latLink.classList.add("disabled-lang")
+}

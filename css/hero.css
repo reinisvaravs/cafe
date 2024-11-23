@@ -169,7 +169,7 @@
 }
 
 #address-img {
-    background: url(../assets/address.jpg);
+    background: url(../assets/info1.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -180,18 +180,18 @@
     border-radius: 100px 100px 0 0;
     width: 220px;
     height: 270px;
-    opacity: 0.5;
+    opacity: 0.4;
     transition: all 0.2s ease;
 }
 .address:hover {
     #address-img {
-        opacity: 0.8;
+        opacity: 0.7;
         transition: all 0.2s ease;
     }
 }
 
 #hours-img {
-    background: url(../assets/hours.jpg);
+    background: url(../assets/info2.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -207,13 +207,13 @@
 }
 .working-hours:hover {
     #hours-img {
-        opacity: 0.8;
+        opacity: 0.9;
         transition: all 0.2s ease;
     }
 }
 
 #phone-img {
-    background: url(../assets/phone.jpg);
+    background: url(../assets/info3.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -229,7 +229,7 @@
 }
 .phone:hover {
     #phone-img {
-        opacity: 0.8;
+        opacity: 0.9;
         transition: all 0.2s ease;
     }
 }

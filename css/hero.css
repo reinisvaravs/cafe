@@ -32,6 +32,7 @@
         display: flex;
         justify-content: left;
         align-items: center;
+        padding-left: 5%;
 
         h1 {
             color: white;
@@ -53,6 +54,7 @@
         justify-content: left;
         align-items: center;
         transform: translateY(-250px);
+        padding-left: 5%;
 
         button {
             width: clamp(160px, 20vw, 250px);

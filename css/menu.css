@@ -349,18 +349,18 @@
         margin-bottom: 20px;
     }
     .drink-title {
-        color: white;
+        color: #f0e8dd;
         font-size: clamp(14px, 2vw, 22px);
         font-family: 'Boska', serif;
         text-transform: uppercase;
     }
     .type {
-        color: white;
+        color: #f0e8dd;
         font-size: clamp(12px, 2vw, 16px);
         font-weight: 100;
     }
     .description {
-        color: white;
+        color: #f0e8dd;
         font-size: clamp(9px, 2vw, 14px);
         margin-top: 10px;
     }
@@ -373,7 +373,7 @@
     justify-content: center;
     align-items: flex-end;
     flex-direction: column;
-    color: white;
+    color: #f0e8dd;
     margin-right: 20px;
     font-size: clamp(14px, 2vw, 20px);
 }

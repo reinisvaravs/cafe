@@ -1,3 +1,10 @@
+gsap.registerPlugin(ScrollTrigger)
+const lenis = new Lenis()
+lenis.on("scroll", ScrollTrigger.update)
+gsap.ticker.add((time) => { lenis.raf(time * 1000) })
+gsap.ticker.lagSmoothing(0)
+
+
 
 
 function showPage(page) {
@@ -163,4 +170,17 @@ window.onload = () => {
 
     document.querySelector(`button[data-page="dzirkstosieViniUnSampaniesi"]`).classList.add("active-drink-btn")
     document.querySelector("#dzirkstosieViniUnSampaniesi").style.display = "flex"
+}
+
+
+document.querySelector("#curtainBtn").onclick = () => {
+    gsap.to(".about", {
+        height: "120vh",
+        duration: 3,
+        ease: "power3.out",
+    })
+    gsap.to("#curtainBtn", {
+        opacity: "0%",
+        duration: 2,
+    })
 }

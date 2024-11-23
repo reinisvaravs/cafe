@@ -4,15 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ķēķis | Kafejnīca</title>
-  
-  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@300&f[]=boska@300,500&f[]=switzer@400&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -42,7 +39,6 @@
     </div>
   </header>
   <main>
-
 
     <div class="hero">
       <div class="bg"></div>
@@ -90,7 +86,6 @@
         </div>
     </div>
 
-
     <div class="about">
       <h1>Par mums</h1>
       <div class="medium-line"></div>
@@ -99,12 +94,10 @@
       <h2 class="curtain-h2"><i>Pie mums vēsture un garša apvienojas, radot gastronomisku garšu baudījumu katrā kumosā.</i></h2>
     </div>
 
-
     <div class="curtain">
       <div class="section">
         <button id="curtainBtn">Uzzināt vairāk!</button>
       </div>
-
 
       <div class="menu">
         <div class="big-icon-div">
@@ -112,6 +105,7 @@
         </div>
         <h1 class="edienkarte-h1">Ēdienkarte</h1>
         <div class="large-line"></div>
+
         <div class="menu-buttons-div">
           <button class="menu_button" data-page="uzkodas">uzkodas</button>
           <button class="menu_button" data-page="zupas">zupas</button>
@@ -127,7 +121,6 @@
           </div>
         </div>
       
-
         <div class="menu-page" id="zupas">
           <div class="menu-img" id="zupas-img">
             <button class="alergeni" type="submit" onclick="window.open('./assets/alergeni.pdf')">
@@ -136,8 +129,8 @@
           </div>
         </div>
 
-
         <div class="menu-page" id="pamatedieni">
+
           <div class="pamatedienu-pogas">
             <button class="pamatediena_button" data-page="piedevas">piedevas</button>
             <button class="pamatediena_button" data-page="gala">gaļa</button>
@@ -146,19 +139,16 @@
             <button class="pamatediena_button" data-page="zuljeni">žuljēni</button>
           </div>
 
-          
           <div class="pamat-page" id="piedevas"></div>
           <div class="pamat-page" id="gala"></div>
           <div class="pamat-page" id="salati"></div>
           <div class="pamat-page" id="pankukas"></div>
           <div class="pamat-page" id="zuljeni"></div>
 
-
           <div class="menu-img" id="pamatediens-img">
             <button class="alergeni" type="submit" onclick="window.open('./assets/alergeni.pdf')"><p class="underline-blue">Alergēni</p></button>
           </div>
         </div>
-
         
         <div class="menu-page" id="saldieEdieni">
           <div class="menu-img" id="saldieEdieni-img">
@@ -168,9 +158,7 @@
           </div>
         </div>
 
-
       </div>
-
 
       <div class="drinks">
         <div class="big-icon-div">
@@ -178,11 +166,12 @@
         </div>
         <h1>Dzērieni</h1>
         <div class="large-line"></div>
+
         <div class="menu-buttons-div" style="margin: 20px 0 100px 0;">
           <button class="drink_button" data-page="dzirkstosieViniUnSampaniesi">dzirkstošie vīni un šampanieši</button>
           <button class="drink_button" data-page="vini">vīns</button>
-          <button class="drink_button" data-page="stiprieAlkoholiskie">stiprie un alkaholiskie</button>
-          <button class="drink_button" data-page="vieglieAlkoholiskie">vieglie un alkaholiskie</button>
+          <button class="drink_button" data-page="stiprieAlkoholiskie">stiprie alk.</button>
+          <button class="drink_button" data-page="vieglieAlkoholiskie">vieglie alk.</button>
           <button class="drink_button" data-page="kokteili">kokteiļi</button>
         </div>
 
@@ -191,15 +180,13 @@
         <div class="drinks-page" id="stiprieAlkoholiskie"></div>
         <div class="drinks-page" id="vieglieAlkoholiskie"></div>
         <div class="drinks-page" id="kokteili"></div>
-
-
       </div>
-
-
     </div>
-  </main>
-  <footer></footer>
 
+  </main>
+
+
+  
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>

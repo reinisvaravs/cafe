@@ -186,7 +186,7 @@ function renderAllItems(category, containerId) {
         const menuItemHTML = `
             <div class="menu-item">
                 <div class="menu-apraksts">
-                    <h1 class="keyF">${item.title} <span class="keyF">${item.allergens}</span></h1>
+                    <h1>${item.title} <span>${item.allergens}</span></h1>
                     <p>${item.description}</p>
                 </div>
                 <div class="menu-cena">
@@ -223,7 +223,7 @@ function renderAllItemsPamat(category, containerId) {
         const menuItemHTML = `
             <div class="menu-item">
                 <div class="menu-apraksts">
-                    <h1 class="keyF">${item.title} <span class="keyF">${item.allergens}</span></h1>
+                    <h1>${item.title} <span>${item.allergens}</span></h1>
                     <p>${item.description}</p>
                 </div>
                 <div class="menu-cena">
@@ -259,20 +259,20 @@ function renderDrinks(category, containerId) {
             .join(" / ");
 
         // Conditionally render the origin only if it is provided
-        const originHTML = item.origin ? `<p>${item.origin}</p>` : "";
+        const originHTML = item.origin ? `<p class="origin">${item.origin}</p>` : "";
 
         // Conditionally render the description for "kokteili" drinks
         const descriptionHTML =
             category === "kokteili" && item.description
-                ? `<h4>${"/" + item.description + "/"}</h4>`
+                ? `<h4 class="description">${"/" + item.description + "/"}</h4>`
                 : "";
 
         const drinksItemHTML = `
             <div class="drink-item">
                 <div class="drink-title-div">
                     ${originHTML}
-                    <h2 class="keyF">${item.title}</h2>
-                    <h3>${item.type ? `${item.type}` : ""}</h3>
+                    <h2 class="drink-title">${item.title}</h2>
+                    <h3 class="type">${item.type ? `${item.type}` : ""}</h3>
                     ${descriptionHTML}
                 </div>
                 <div class="drink-variants-div">

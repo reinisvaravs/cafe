@@ -164,33 +164,3 @@ window.onload = () => {
     document.querySelector(`button[data-page="dzirkstosieViniUnSampaniesi"]`).classList.add("active-drink-btn")
     document.querySelector("#dzirkstosieViniUnSampaniesi").style.display = "flex"
 }
-
-
-document.addEventListener("keydown", (event) => {
-    if (event.key === "F" || event.key === "f") { // Check for 'F' or 'f'
-        document.querySelectorAll(".keyF").forEach(h2 => {
-            h2.style.fontFamily = "'General Sans', sans-serif"
-        })
-    }
-});
-
-
-
-
-let toggle = false; 
-console.log("key F toggles font")
-
-document.addEventListener("keydown", (event) => {
-    if (event.key === "F" || event.key === "f") {
-        if (toggle) {
-            document.querySelectorAll(".keyF").forEach(h2 => {
-                h2.style.fontFamily = "'General Sans', sans-serif"
-            })
-        } else {
-            document.querySelectorAll(".keyF").forEach(h2 => {
-                h2.style.fontFamily = "'Boska', serif"
-            })
-        }
-        toggle = !toggle;
-    }
-});

@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+body {
+    background-color: var(--darkgray);
+}
+
+main, header, footer {
+    width: 100vw;
+}
+
+main {
+    margin-top: -100px;
+}
+
+:root {
+    --tan: #b0946b;
+    --darkgray: #121212;
+}
+
+h1, h2, h3 {
+    font-family: serif;
+    font-weight: 700;
+}
+p, button, h4 {
+    font-family: sans-serif;
+    font-weight: 100;
+}

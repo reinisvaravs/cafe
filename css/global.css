@@ -3,12 +3,14 @@
     padding: 0;
 }
 
+:root {
+    --tan: #b0946b;
+    --darkgray: #121212;
+}
+
 html, body {
     overflow-x: hidden;
     width: 100vw;
-}
-
-body {
     background-color: var(--darkgray);
 }
 
@@ -18,11 +20,6 @@ main, header, footer {
 
 main {
     margin-top: -100px;
-}
-
-:root {
-    --tan: #b0946b;
-    --darkgray: #121212;
 }
 
 h1, h2, h3 {

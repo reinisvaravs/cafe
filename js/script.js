@@ -106,25 +106,17 @@ document.querySelectorAll(".drink_button").forEach(button => {
 
 
 
-document.querySelectorAll(".edienkarte-btn").forEach(button => {
-    button.onclick = () => {
-        const a = document.querySelector(".hero").offsetHeight
-        const b = document.querySelector(".about").offsetHeight
-        window.scroll({
-            top: a+b+150, 
-            left: 0, 
-            behavior: 'smooth' 
-        })
-    }
-})
 
-document.querySelectorAll(".gotop").forEach(button => {
-    button.onclick = () => {
-        window.scroll({
-            top: 0, 
-            left: 0, 
-            behavior: 'smooth' 
-        })
+
+function scrollFunction(section) {
+    document.querySelector(`.${section}`).scrollIntoView({
+        behavior: "smooth" 
+    });
+}
+
+document.querySelectorAll(".header-buttons").forEach(button => {
+    button.onclick = function() {
+        scrollFunction(this.dataset.section)
     }
 })
 
@@ -132,34 +124,36 @@ document.querySelectorAll(".gotop").forEach(button => {
 
 
 
-let currentOpenCategory = null;
+
+
+let currentOpenCategory = null
 
 function showCategoryItems(category) {
-    const currentCategoryDiv = document.querySelector(`#${category}`);
+    const currentCategoryDiv = document.querySelector(`#${category}`)
     
     if (!currentCategoryDiv) {
-        console.error(`Category with ID '${category}' not found.`);
-        return; 
+        console.error(`Category with ID '${category}' not found.`)
+        return 
     }
 
     if (currentOpenCategory === category) {
-        currentCategoryDiv.style.maxHeight = null;
-        currentOpenCategory = null;
+        currentCategoryDiv.style.maxHeight = null
+        currentOpenCategory = null
     } else {
         document.querySelectorAll(".drink-items").forEach(div => {
-            div.style.maxHeight = null;
-        });
+            div.style.maxHeight = null
+        })
 
-        currentCategoryDiv.style.maxHeight = `${currentCategoryDiv.scrollHeight}px`;
-        currentOpenCategory = category;
+        currentCategoryDiv.style.maxHeight = `${currentCategoryDiv.scrollHeight}px`
+        currentOpenCategory = category
     }
 }
 
 document.querySelectorAll(".category-btn").forEach(button => {
     button.onclick = function () {
-        showCategoryItems(this.dataset.subcategory);
-    };
-});
+        showCategoryItems(this.dataset.subcategory)
+    }
+})
 
 
 
@@ -170,6 +164,24 @@ window.onload = () => {
 
     document.querySelector(`button[data-page="dzirkstosieViniUnSampaniesi"]`).classList.add("active-drink-btn")
     document.querySelector("#dzirkstosieViniUnSampaniesi").style.display = "flex"
+}
+
+const latLink = document.getElementById('latBtn')
+const engLink = document.getElementById('engBtn')
+
+if (document.documentElement.lang === "lv") {
+    latLink.classList.add("active-lang")
+    latLink.classList.remove("disabled-lang")
+
+    engLink.classList.remove("active-lang")
+    engLink.classList.add("disabled-lang")
+} 
+else {
+    engLink.classList.add("active-lang")
+    engLink.classList.remove("disabled-lang")
+
+    latLink.classList.remove("active-lang")
+    latLink.classList.add("disabled-lang")
 }
 
 
@@ -187,20 +199,66 @@ document.querySelector("#curtainBtn").onclick = () => {
 
 
 
-const latLink = document.getElementById('latBtn');
-const engLink = document.getElementById('engBtn');
 
-if (document.documentElement.lang === "lv") {
-    latLink.classList.add("active-lang")
-    latLink.classList.remove("disabled-lang")
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+let isMenuOpen = false;
 
-    engLink.classList.remove("active-lang")
-    engLink.classList.add("disabled-lang")
-} 
-else {
-    engLink.classList.add("active-lang")
-    engLink.classList.remove("disabled-lang")
+// GSAP animation for the menu sliding
+const menuTimeline = gsap.timeline({ paused: true });
+menuTimeline.to(mobileMenu, {
+    x: "-100%", // Slide in from the right
+    duration: 0.5,
+    ease: "power3.out",
+});
 
-    latLink.classList.remove("active-lang")
-    latLink.classList.add("disabled-lang")
-}
+// GSAP animation for the burger icon
+const burgerTimeline = gsap.timeline({ paused: true });
+burgerTimeline
+    .to("#menuBtn span:nth-child(1)", { // Top line
+        rotation: 45,
+        y: 11.5,
+        duration: 0.3,
+        ease: "power3.out",
+    })
+    .to("#menuBtn span:nth-child(2)", { // Middle line
+        opacity: 0,
+        duration: 0.3,
+        ease: "power3.out",
+    }, "<")
+    .to("#menuBtn span:nth-child(3)", { // Bottom line
+        rotation: -45,
+        y: -11.5,
+        duration: 0.3,
+        ease: "power3.out",
+    }, "<");
+
+// Toggle menu on burger click
+menuBtn.onclick = () => {
+    isMenuOpen = !isMenuOpen;
+    if (isMenuOpen) {
+        menuTimeline.play(); // Open the menu
+        burgerTimeline.play(); // Animate the burger
+    } else {
+        menuTimeline.reverse(); // Close the menu
+        burgerTimeline.reverse(); // Reset the burger animation
+    }
+};
+
+// Close menu on window resize
+window.addEventListener("resize", () => {
+    if (isMenuOpen) {
+        menuTimeline.reverse(); // Close the menu
+        burgerTimeline.reverse(); // Reset burger animation
+        isMenuOpen = false;
+    }
+});
+
+// Close menu on user scroll
+window.addEventListener("scroll", () => {
+    if (isMenuOpen) {
+        menuTimeline.reverse(); // Close the menu
+        burgerTimeline.reverse(); // Reset the burger animation
+        isMenuOpen = false;
+    }
+});

@@ -15,7 +15,7 @@
         color: var(--tan);
         font-size: 50px;
         margin-bottom: 20px;
-        margin-top: 150px;
+        margin-top: 140px;
     }
     h2 {
         color: #8e9399;
@@ -72,7 +72,7 @@
     transform: translateX(-50%);
     cursor: pointer;
     transition: all 0.5s ease;
-    font-family: 'Boska', serif;
+    font-family: serif;
 }
 #curtainBtn:hover {
     color: rgb(180, 180, 180);

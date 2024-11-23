@@ -1,5 +1,10 @@
 @media screen and (max-width: 1000px) {
 
+
+    #menuBtn {
+        display: flex;
+    }
+
     /* --- HERO --- */
 
     .L-screen {
@@ -51,7 +56,7 @@
         flex-direction: column;
         height: 140vh;
         top: 88%;
-        transform: translateY(10px);
+        transform: translateY(-50px);
     }
     .address, .working-hours, .phone {
         height: 30%;

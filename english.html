@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ķēķis | Cafe</title>
+  <title>Kitchen | Cafe</title>
 
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="css/header.css">
@@ -21,86 +21,100 @@
       </button>
         <div class="nav L-screen">
           <ul>
-            <li><button class="header-buttons" data-section="menu">Ēdienkarte</button></li>
-            <li><button class="header-buttons" data-section="banquet">Banketi</button></li>
-            <li><button class="header-buttons" data-section="galery">Galerija</button></li>
-            <li><button class="header-buttons" data-section="about">Par mums</button></li>
-            <li><button class="header-buttons" data-section="contacts">Kontakti</button></li>
+            <li><button class="header-buttons" data-section="menu">Menu</button></li>
+            <li><button class="header-buttons" data-section="banquet">Banquets</button></li>
+            <li><button class="header-buttons" data-section="galery">Gallery</button></li>
+            <li><button class="header-buttons" data-section="about">About Us</button></li>
+            <li><button class="header-buttons" data-section="contacts">Contacts</button></li>
             <li class="lang-links">
-              <a href="index.html" id="latBtn">LAT</a>
-              <a href="english.html" id="engBtn">ENG</a>
+              <a href="index.html" class="latBtn">LAT</a>
+              <a href="english.html" class="engBtn">ENG</a>
             </li>
           </ul>
         </div>
       <div class="reserve-div L-screen">
         <button><a href="tel:+371 27 070 000">Reserve</a></button>
       </div>
-      <button class="popup-menu M-screen" id="menuBtn">
+      <div class="popup-menu M-screen" id="menuBtn">
         <span class="span-menu"></span>
         <span class="span-menu"></span>
         <span class="span-menu"></span>
-      </button>
-      <div class="popup M-screen"></div>
+      </div>
+      <div class="popup-menu-content M-screen" id="mobileMenu">
+        <ul>
+          <li class="underline-white"><button class="header-buttons" data-section="menu">Menu</button></li>
+          <li class="underline-white"><button class="header-buttons" data-section="banquet">Banquets</button></li>
+          <li class="underline-white"><button class="header-buttons" data-section="galery">Gallery</button></li>
+          <li class="underline-white"><button class="header-buttons" data-section="about">About Us</button></li>
+          <li class="underline-white"><button class="header-buttons" data-section="contacts">Contacts</button></li>
+          <li><a href="tel:+371 27 070 000" class="burger-tel">Call</a></li>
+          <li class="lang-links burger-lang">
+            <a href="index.html" class="latBtn">LAT</a>
+            <p>/</p>
+            <a href="english.html" class="engBtn">ENG</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
   <main>
 
     <div class="hero">
       <div class="bg"></div>
-        <div class="hero-h1-div">
-          <h1>Harmony of taste<br>and sensations</h1>
+      <div class="hero-h1-div">
+        <h1>Harmony of Taste<br>and Sensations</h1>
+      </div>
+      <div class="hero-btn-div">
+        <button class="edienkarte-btn header-buttons" data-section="menu">Menu</button>
+      </div>
+      <div class="info">
+        <div class="address">
+          <div class="icon-div">
+            <img src="./assets/location.webp" class="icon">
+          </div>
+          <h1>Brīvības 131, Jēkabpils</h1>
+          <div class="small-line"></div>
+          <a href="https://maps.app.goo.gl/Ubmr3wtZTtbSxTBn6" target="_blank" class="karte-link">Open Google Maps <span class="arrow">></span></a>
+          <div id="address-img"></div>
         </div>
-        <div class="hero-btn-div">
-          <button class="edienkarte-btn header-buttons" data-section="menu">Ēdienkarte</button>
-        </div>
-        <div class="info">
-          <div class="address">
-            <div class="icon-div">
-              <img src="./assets/location.webp" class="icon">
-            </div>
-            <h1>Brīvības 131, Jēkabpils</h1>
+        <div class="working-hours">
+          <div class="icon-div">
+            <img src="./assets/clock.webp" class="icon">
+          </div>
+            <h1>Working Hours</h1>
             <div class="small-line"></div>
-            <a href="https://maps.app.goo.gl/Ubmr3wtZTtbSxTBn6" target="_blank" class="karte-link">Open Google Maps <span class="arrow">></span></a>
-            <div id="address-img"></div>
+            <p class="hours">Monday - Thursday</p>
+            <p class="hours">9:00 AM - 7:00 PM</p>
+              <br>
+            <p class="hours">Friday - Saturday</p>
+            <p class="hours">9:00 AM - 10:00 PM</p>
+              <br>
+            <p class="hours">Sunday</p>
+            <p class="hours">11:00 AM - 7:00 PM</p>
+            <div id="hours-img"></div>
           </div>
-          <div class="working-hours">
+          <div class="phone">
             <div class="icon-div">
-              <img src="./assets/clock.webp" class="icon">
+              <img src="./assets/phone.webp" class="icon">
             </div>
-              <h1>Working hours</h1>
-              <div class="small-line"></div>
-              <p class="hours">Monday - Thursday</p>
-              <p class="hours">9:00 AM - 7:00 PM</p>
-                <br>
-              <p class="hours">Friday - Saturday</p>
-              <p class="hours">9:00 AM - 10:00 PM</p>
-                <br>
-              <p class="hours">Sunday</p>
-              <p class="hours">11:00 AM - 7:00 PM</p>
-              <div id="hours-img"></div>
-            </div>
-            <div class="phone">
-              <div class="icon-div">
-                <img src="./assets/phone.webp" class="icon">
-              </div>
-              <h1>Call and reserve!</h1>
-              <div class="small-line"></div>
-              <p class="underline"><a href="tel:+371 27 070 000"><span>+371</span> 27 070 000</a></p>
-              <div id="phone-img"></div>
-          </div>
+            <h1>Call and Reserve!</h1>
+            <div class="small-line"></div>
+            <p class="underline"><a href="tel:+371 27 070 000"><span>+371</span> 27 070 000</a></p>
+            <div id="phone-img"></div>
         </div>
+      </div>
     </div>
 
     <div class="about">
-      <h1>About us</h1>
+      <h1>About Us</h1>
       <div class="medium-line"></div>
-      <h2><i>We set tables for seminars, celebrations, funeral meals in the café premises or at the location of the client’s choice, snacks to-go, event catering, and lunch delivery within the city limits</i></h2>
+      <h2><i>We set tables for seminars, celebrations, funeral meals at the café or the location of your choice. We offer take-away snacks, event catering, and lunch delivery within city limits.</i></h2>
       <div class="about-img"></div>
-      <h2 class="curtain-h2"><i>With us, history and taste merge, creating a gastronomic experience in every bite.</i></h2>
+      <h2 class="curtain-h2"><i>History and taste combine here, creating a gastronomic experience in every bite.</i></h2>
     </div>
 
     <div class="section">
-      <button id="curtainBtn">Learn more!</button>
+      <button id="curtainBtn">Learn More!</button>
     </div>
 
     <div class="menu">
@@ -137,7 +151,7 @@
       <div class="menu-page" id="pamatedieni">
 
         <div class="pamatedienu-pogas">
-          <button class="pamatediena_button" data-page="piedevas">Side dishes</button>
+          <button class="pamatediena_button" data-page="piedevas">Side Dishes</button>
           <button class="pamatediena_button" data-page="gala">Meat</button>
           <button class="pamatediena_button" data-page="salati">Salads</button>
           <button class="pamatediena_button" data-page="pankukas">Pancakes</button>

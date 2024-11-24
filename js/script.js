@@ -164,25 +164,35 @@ window.onload = () => {
 
     document.querySelector(`button[data-page="dzirkstosieViniUnSampaniesi"]`).classList.add("active-drink-btn")
     document.querySelector("#dzirkstosieViniUnSampaniesi").style.display = "flex"
+
+
+    activateLangLinks()
 }
 
-const latLink = document.getElementById('latBtn')
-const engLink = document.getElementById('engBtn')
 
-if (document.documentElement.lang === "lv") {
-    latLink.classList.add("active-lang")
-    latLink.classList.remove("disabled-lang")
-
-    engLink.classList.remove("active-lang")
-    engLink.classList.add("disabled-lang")
-} 
-else {
-    engLink.classList.add("active-lang")
-    engLink.classList.remove("disabled-lang")
-
-    latLink.classList.remove("active-lang")
-    latLink.classList.add("disabled-lang")
+function activateLangLinks() {
+    if (document.documentElement.lang === "lv") {
+        document.querySelectorAll(".latBtn").forEach(latLink => {
+            latLink.classList.add("active-lang")
+            latLink.classList.remove("disabled-lang")
+        })
+        document.querySelectorAll(".engBtn").forEach(engLink => {
+            engLink.classList.remove("active-lang")
+            engLink.classList.add("disabled-lang")
+        })
+    }
+    else {
+        document.querySelectorAll(".latBtn").forEach(latLink => {
+            latLink.classList.remove("active-lang")
+            latLink.classList.add("disabled-lang")
+        })
+        document.querySelectorAll(".engBtn").forEach(engLink => {
+            engLink.classList.add("active-lang")
+            engLink.classList.remove("disabled-lang")
+        })
+    }
 }
+
 
 
 document.querySelector("#curtainBtn").onclick = () => {
@@ -207,7 +217,7 @@ let isMenuOpen = false;
 // GSAP animation for the menu sliding
 const menuTimeline = gsap.timeline({ paused: true });
 menuTimeline.to(mobileMenu, {
-    x: "-100%", // Slide in from the right
+    right: "0%", // Slide in from the right
     duration: 0.5,
     ease: "power3.out",
 });
@@ -243,6 +253,7 @@ menuBtn.onclick = () => {
         menuTimeline.reverse(); // Close the menu
         burgerTimeline.reverse(); // Reset the burger animation
     }
+    activateLangLinks()
 };
 
 // Close menu on window resize

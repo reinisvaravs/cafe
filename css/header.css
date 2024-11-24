@@ -104,39 +104,6 @@ header {
 
 
 
-.lang-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.lang-links-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.active-lang {
-    text-decoration: none;
-    color: #8e9399;
-    pointer-events: none;
-    text-decoration: underline;
-}
-
-.disabled-lang {
-    text-decoration: none;
-    color: #6a6d72;
-    cursor: default;
-    pointer-events: all;
-    transition: color 0.5s ease;
-}
-.disabled-lang:hover {
-    color: white;
-    transition: color 0.3s ease;
-}
-
-
-
 
 
 
@@ -171,8 +138,9 @@ header {
 .popup-menu-content {
     position: fixed;
     top: 0;
-    right: -30%;
+    right: -100%;
     width: 30%;
+    min-width: 170px;
     height: 100vh;
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.5);
@@ -198,16 +166,28 @@ header {
     width: 100px;
     text-align: center;
     transition: all 0.5s ease;
-    a {
-        text-decoration: none;
-        color: white;
-        font-family: sans-serif;
-    }
+}
+.burger-tel {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
 }
 
 .popup-menu-content ul li:hover {
     background-color: #181b1d;
     transition: all 0.3s ease;
+}
+
+.popup-menu-content ul li:nth-child(6) {
+    margin-top: 50px;
+    background-color: var(--tan);
+    padding: 5px 10px;
+    transition: background 0.5s ease;
+}
+
+.popup-menu-content ul li:nth-child(6):hover {
+    transition: background 0.3s ease;
+    background-color: rgba(181, 152, 108, 0.8);
 }
 
 .popup-menu-content ul li button {
@@ -239,4 +219,47 @@ header {
 .underline-white:hover::after {
     width: 100%;
     transition: all 0.5s ease;
+}
+
+
+
+.lang-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lang-links-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.active-lang {
+    text-decoration: none;
+    color: #8e9399;
+    pointer-events: none;
+    text-decoration: underline;
+}
+
+.disabled-lang {
+    text-decoration: none;
+    color: #6a6d72;
+    cursor: default;
+    pointer-events: all;
+    transition: color 0.5s ease;
+}
+.disabled-lang:hover {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+
+.burger-lang {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
 }

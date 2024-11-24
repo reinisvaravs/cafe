@@ -12,7 +12,7 @@
 
     h1 {
         color: var(--tan);
-        font-size: clamp(30px, 5vw, 50px);
+        font-size: clamp(30px, 7vw, 50px);
         margin-bottom: 20px;
         margin-top: 130px;
     }
@@ -23,8 +23,8 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 140px;
-    height: 140px;
+    width: clamp(100px, 10vw, 150px);
+    height: clamp(100px, 10vw, 150px);
     border-radius: 200px;
     background: linear-gradient(135deg, #342e25, var(--darkgray));
     display: flex;
@@ -287,7 +287,7 @@
 
     h1 {
         color: var(--tan);
-        font-size: 50px;
+        font-size: clamp(30px, 7vw, 50px);
         margin-bottom: 20px;
         margin-top: 130px;
     }

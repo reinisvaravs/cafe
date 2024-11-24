@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kitchen | Cafe</title>
+  <title>Ķēķis | Menu</title>
 
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="css/header.css">
@@ -12,16 +12,19 @@
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/pakalpojumi.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/menu2.css">
 </head>
 <body>
   <header>
     <div class="header-div">
 
-      <button class="logo-btn">
+      <a href="english.html" target="_blank" class="logo-btn">
         <img src="./assets/logo-white.png" class="logo" draggable="false">
-      </button>
+      </a href="index.html" target="_blank">
 
-      <div class="reserve-div" style="margin-right: 20px; gap: 20px;">
+      <a href="index.html" target="_blank" class="back-link underline-white">kekis.lv</a>
+
+      <div class="reserve-div">
         <li class="lang-links-menu">
           <a href="menuLAT.html" id="latBtn">LAT</a>
           <a href="menuENG.html" id="engBtn">ENG</a>
@@ -31,10 +34,11 @@
 
     </div>
   </header>
-  <main style="margin-top: 90px;">
+  <main>
+    <div id="whitespace"></div>
 
-    <div class="menu" style="padding-top: 100px;">
-      <div class="big-icon-div" style="transform: translate(-50%, 40%);">
+    <div class="menu">
+      <div class="big-icon-div">
         <img src="./assets/chef-hat.webp" class="big-icon">
       </div>
       <h1 class="edienkarte-h1">Menu</h1>
@@ -104,7 +108,7 @@
       <div class="large-line"></div>
 
       <div class="menu-buttons-div" style="margin: 20px 0 100px 0;">
-        <button class="drink_button" data-page="dzirkstosieViniUnSampaniesi">Sparkling Wines, Champagnes</button>
+        <button class="drink_button" data-page="dzirkstosieViniUnSampaniesi">Spark. Wines, Champagnes</button>
         <button class="drink_button" data-page="vini">Wine</button>
         <button class="drink_button" data-page="stiprieAlkoholiskie">Strong Alcohol</button>
         <button class="drink_button" data-page="vieglieAlkoholiskie">Light Alcohol</button>

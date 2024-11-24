@@ -116,3 +116,28 @@
         padding: 5px 0;
     }
 }
+
+
+
+@media screen and (max-width: 360px) {
+    .menu-buttons-div {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0;
+        margin-bottom: 40px;
+    }
+    .menu_button {
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .pamatedienu-pogas {
+        justify-content: center;
+        gap: 10px;
+    }
+    .pamatediena_button {
+        padding: 10px 0;
+        width: auto;
+    }
+}

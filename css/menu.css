@@ -60,7 +60,7 @@
 .menu_button, .drink_button {
     border: none;
     color: var(--tan);
-    font-size: clamp(8px, 3vw, 24px);
+    font-size: clamp(14px, 3vw, 24px);
     padding-bottom: 20px;
     padding-top: 20px;
     width: 150px;
@@ -115,7 +115,7 @@
         }
     }
     p {
-        font-size: clamp(9px, 2vw, 16px);
+        font-size: clamp(12px, 2vw, 16px);
         margin-bottom: 15px;
     }
     h2 {
@@ -123,7 +123,7 @@
         bottom: 10px;
         right: 0;
         color: var(--tan);
-        font-size: clamp(12px, 4vw, 30px);
+        font-size: clamp(14px, 4vw, 30px);
     }
 }
 
@@ -175,15 +175,16 @@
 .pamatedienu-pogas {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-right: 10px;
 }
 
 .pamatediena_button {
     border: none;
     color: var(--darkgray);
-    font-size: 12px;
+    font-size: clamp(12px, 2vw, 16px);
     padding-bottom: 10px;
     padding-top: 10px;
     width: 100px;
@@ -233,8 +234,7 @@
 
 #pankukas .menu-item:nth-child(5) {
     border: none;
-    margin-top: 20px;
-    margin-bottom: -15px;
+    margin-bottom: -10px;
 }
 
 .alergeni {
